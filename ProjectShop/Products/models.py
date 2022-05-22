@@ -26,10 +26,18 @@ class Products(models.Model):
     def __str__(self):
         return f"{self.Product_name} - {self.Price} - {self.Is_listed} - {self.Image}"
 
+    class Meta:
+        verbose_name = "Product"
+        verbose_name_plural = "Products"
+
 
 
 class Categories(models.Model):
     Name = models.CharField(max_length = 100)
+
+    class Meta:
+        verbose_name = "Category"
+        verbose_name_plural = "Categories"
 
 
 class Basket(models.Model):
@@ -46,6 +54,10 @@ class History_transactions(models.Model):
     Status = models.CharField(max_length = 100)
     Excepted_day_of_delivery = models.DateField()
     Id_delivery = models.IntegerField()
+
+    class Meta:
+        verbose_name = "History_transaction"
+        verbose_name_plural = "History_transactions"
 
 class Delivery(models.Model):
     Name = models.TextField(max_length = 1000)
