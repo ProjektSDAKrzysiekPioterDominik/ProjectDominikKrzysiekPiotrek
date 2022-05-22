@@ -6,14 +6,13 @@ class ProductForm(ModelForm):
         model = Products
 
         fields = [
-            "Id",
+            "Id_category",
+            "Product_name",
+            "Price",
+            "Image",
+            "Describe",
             "Date_added",
             "Is_listed",
-            "Describe",
-            "Image",
-            "Price",
-            "Product_name",
-            "Id_category",
             "Id_client",
         ]
 
