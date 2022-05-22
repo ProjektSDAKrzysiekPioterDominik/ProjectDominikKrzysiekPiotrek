@@ -1,20 +1,18 @@
 from django.forms import ModelForm, CharField
-from Products.models import Products
+from Products.models import Products #type:ignore
 
 class ProductForm(ModelForm):
     class Meta:
         model = Products
 
         fields = [
-            "Id",
+            "Id_category",
+            "Product_name",
+            "Price",
+            "Image",
+            "Describe",
             "Date_added",
             "Is_listed",
-            "Describe",
-            "Image",
-            "Price",
-            "Product_name",
-            "Id_category",
-            "Id_client",
         ]
 
         title = CharField(min_length = 5, max_length = 256, required=True)

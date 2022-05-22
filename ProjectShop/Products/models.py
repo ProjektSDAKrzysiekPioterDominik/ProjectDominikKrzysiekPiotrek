@@ -1,42 +1,38 @@
 from django.db import models
+from django.core.validators import MinValueValidator
 
 # Create your models here.
+class Client(models.Model):
+    Login = models.TextField(max_length = 20)
+    Name = models.TextField(max_length = 20)
+    Surname = models.TextField(max_length = 20)
+    Adress = models.TextField(max_length = 100)
+    Email = models.TextField(max_length = 20)
+    Phone = models.TextField(max_length = 20)
+    Birth_date = models.DateField()
+    City = models.TextField(max_length = 20)
+
+
 class Products(models.Model):
-    Id = models.IntegerField()
+    Id_category = models.IntegerField()
+    Product_name = models.CharField(max_length=100)
+    Price = models.DecimalField(default=0,validators=[MinValueValidator(0.01)], max_digits=12, decimal_places=2)
+    Image = models.ImageField(blank=True)
+    Describe = models.TextField(max_length=500)
     Date_added = models.DateField()
     Is_listed = models.BooleanField()
-    Describe = models.TextField(max_length = 1000)
-    Image = models.ImageField()
-    Price = models.DecimalField(max_digits = 12, decimal_places = 2)
-    Product_name = models.CharField(max_length = 100)
-    Id_category = models.IntegerField()
-    Id_client = models.IntegerField()
-
-
-    class Meta:
-        verbose_name = "Product"
-        verbose_name_plural = "Products"
+    #Id_client = models.ForeignKey(Client, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.Product_name} - {self.Price} - {self.Is_listed}"
+        return f"{self.Product_name} - {self.Price} - {self.Is_listed} - {self.Image}"
+
+
 
 class Categories(models.Model):
-    Id = models.IntegerField()
     Name = models.CharField(max_length = 100)
 
-class Client(models.Model):
-    Id = models.IntegerField()
-    Login = models.TextField(max_length = 1000)
-    Name = models.TextField(max_length = 1000)
-    Surname = models.TextField(max_length = 1000)
-    Adress = models.TextField(max_length = 1000)
-    Email = models.TextField(max_length = 1000)
-    Phone = models.TextField(max_length = 1000)
-    Birth_date = models.DateField()
-    City = models.TextField(max_length = 1000)
 
 class Basket(models.Model):
-    Id = models.IntegerField()
     Id_product = models.IntegerField()
     Id_client = models.IntegerField()
     Quantity = models.IntegerField()
@@ -44,7 +40,6 @@ class Basket(models.Model):
 
 
 class History_transactions(models.Model):
-    Id = models.IntegerField()
     Id_client = models.IntegerField()
     Date_of_buy = models.DateField()
     Price = models.DecimalField(max_digits = 12, decimal_places = 2)
@@ -53,7 +48,6 @@ class History_transactions(models.Model):
     Id_delivery = models.IntegerField()
 
 class Delivery(models.Model):
-    Id = models.IntegerField()
     Name = models.TextField(max_length = 1000)
     Surname = models.TextField(max_length = 1000)
     Company_name = models.TextField(max_length = 1000)
