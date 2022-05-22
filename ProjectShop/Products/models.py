@@ -5,20 +5,23 @@ class Products(models.Model):
     Id = models.IntegerField()
     Date_added = models.DateField()
     Is_listed = models.BooleanField()
-    Describe = models.TextField(max_length = 1000)
-    Image = models.ImageField()
+    Describe = models.TextField(max_length = 500)
+    Image = models.ImageField(blank = True)
     Price = models.DecimalField(max_digits = 12, decimal_places = 2)
     Product_name = models.CharField(max_length = 100)
     Id_category = models.IntegerField()
     Id_client = models.IntegerField()
-
-
-    class Meta:
-        verbose_name = "Product"
-        verbose_name_plural = "Products"
-
     def __str__(self):
-        return f"{self.Product_name} - {self.Price} - {self.Is_listed}"
+        return self.Product_name
+
+
+
+    # class Meta:
+    #     verbose_name = "Product"
+    #     verbose_name_plural = "Products"
+    #
+    # def __str__(self):
+    #     return f"{self.Product_name} - {self.Price} - {self.Is_listed}"
 
 class Categories(models.Model):
     Id = models.IntegerField()
@@ -34,6 +37,8 @@ class Client(models.Model):
     Phone = models.TextField(max_length = 1000)
     Birth_date = models.DateField()
     City = models.TextField(max_length = 1000)
+
+
 
 class Basket(models.Model):
     Id = models.IntegerField()
