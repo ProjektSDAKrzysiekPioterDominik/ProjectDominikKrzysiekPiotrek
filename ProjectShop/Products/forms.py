@@ -1,5 +1,5 @@
 from django.forms import ModelForm, CharField
-from Products.models import Products
+from Products.models import Products #type:ignore
 
 class ProductForm(ModelForm):
     class Meta:
@@ -13,7 +13,6 @@ class ProductForm(ModelForm):
             "Describe",
             "Date_added",
             "Is_listed",
-            "Id_client",
         ]
 
         title = CharField(min_length = 5, max_length = 256, required=True)

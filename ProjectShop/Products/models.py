@@ -2,24 +2,6 @@ from django.db import models
 from django.core.validators import MinValueValidator
 
 # Create your models here.
-class Products(models.Model):
-    Id_category = models.IntegerField()
-    Product_name = models.CharField(max_length=100)
-    Price = models.DecimalField(default=0,validators=[MinValueValidator(0.01)], max_digits=12, decimal_places=2)
-    Image = models.ImageField(blank=True)
-    Describe = models.TextField(max_length=500)
-    Date_added = models.DateField()
-    Is_listed = models.BooleanField()
-    Id_client = models.IntegerField(default=0,validators=[MinValueValidator(0.01)])
-
-    def __str__(self):
-        return f"{self.Product_name} - {self.Price} - {self.Is_listed} - {self.Image}"
-
-
-
-class Categories(models.Model):
-    Name = models.CharField(max_length = 100)
-
 class Client(models.Model):
     Login = models.TextField(max_length = 20)
     Name = models.TextField(max_length = 20)
@@ -30,6 +12,24 @@ class Client(models.Model):
     Birth_date = models.DateField()
     City = models.TextField(max_length = 20)
 
+
+class Products(models.Model):
+    Id_category = models.IntegerField()
+    Product_name = models.CharField(max_length=100)
+    Price = models.DecimalField(default=0,validators=[MinValueValidator(0.01)], max_digits=12, decimal_places=2)
+    Image = models.ImageField(blank=True)
+    Describe = models.TextField(max_length=500)
+    Date_added = models.DateField()
+    Is_listed = models.BooleanField()
+    #Id_client = models.ForeignKey(Client, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.Product_name} - {self.Price} - {self.Is_listed} - {self.Image}"
+
+
+
+class Categories(models.Model):
+    Name = models.CharField(max_length = 100)
 
 
 class Basket(models.Model):
