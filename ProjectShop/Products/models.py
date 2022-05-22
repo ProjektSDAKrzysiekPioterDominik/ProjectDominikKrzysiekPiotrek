@@ -14,7 +14,7 @@ class Client(models.Model):
 
 
 class Products(models.Model):
-    Id_category = models.IntegerField()
+    Id_category = models.IntegerField(null = True)
     Product_name = models.CharField(max_length=100)
     Price = models.DecimalField(default=0,validators=[MinValueValidator(0.01)], max_digits=12, decimal_places=2)
     Image = models.ImageField(blank=True)
@@ -41,19 +41,19 @@ class Categories(models.Model):
 
 
 class Basket(models.Model):
-    Id_product = models.IntegerField()
-    Id_client = models.IntegerField()
+    Id_product = models.IntegerField(null = True)
+    Id_client = models.IntegerField(null = True)
     Quantity = models.IntegerField()
     Price = models.DecimalField(max_digits = 12, decimal_places = 2)
 
 
 class History_transactions(models.Model):
-    Id_client = models.IntegerField()
+    Id_client = models.IntegerField(null = True)
     Date_of_buy = models.DateField()
     Price = models.DecimalField(max_digits = 12, decimal_places = 2)
     Status = models.CharField(max_length = 100)
     Excepted_day_of_delivery = models.DateField()
-    Id_delivery = models.IntegerField()
+    Id_delivery = models.IntegerField(null = True)
 
     class Meta:
         verbose_name = "History_transaction"
