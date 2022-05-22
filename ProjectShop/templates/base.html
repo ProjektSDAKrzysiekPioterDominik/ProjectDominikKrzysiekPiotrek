@@ -1,14 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% load static %}
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TeleKurwisie</title>
+		<link rel="stylesheet"  href="{%  static  'css/style.css'  %}">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/e72b2f82ff.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<nav>
+			<div class="title">
+				<p>Tele<span>Kurwisie</span></p>
+			</div>
+			<div class="user-item login">
+				<p><i class="fa-solid fa-user"></i>Zaloguj się</p>
+			</div>
+			<div class="user-item basket">
+				<i class="fa-solid fa-basket-shopping"></i>Koszyk
+			</div>
+		</nav>
+		<aside>
+			<div class="works">
+				<p>działy</p>
+				<span>korzyści</span>
+			</div>
+			<hr />
+			<div class="list">
+				<ul>
+					<li>Elektronika</li>
+					<li>Moda</li>
+					<li>Dom i ogród</li>
+					<li>Dziecko</li>
+					<li>Uroda</li>
+					<li>Zdrowie</li>
+					<li>Sport i rozrywka</li>
+					<li>Motoryzacja</li>
+					<li>Nieruchomości</li>
+					<li>Żywność</li>
+				</ul>
+			</div>
+		</aside>
+		<div class="ad">
+			<div class="text">
+				<p>Reklama</p>
+			</div>
+		</div>
+		<main>
+			<div class="upperMain">
+				<label for="name">Czego szukasz?</label>
 
-    {% block content %}
-
-    {% endblock %}
-
-</body>
+				<input type="text" id="search" />
+				<label for="product-select"></label>
+				<select id="product-select">
+					<option value="all">Wszystkie Kategorie</option>
+					<optgroup label="Kategorie">
+						<option>Kategoria 1</option>
+						<option>Kategoria 2</option>
+						<option>Kategoria 3</option>
+						<option>Kategoria 4</option>
+						<option>Kategoria 5</option>
+						<option>Kategoria 6</option>
+						<option>Kategoria 7</option>
+					</optgroup>
+					<optgroup label="Inne Opcje">
+						<option>Opcja 1</option>
+						<option>Opcja 2</option>
+						<option>Opcja 3</option>
+						<option>Opcja 4</option>
+					</optgroup>
+				</select>
+			</div>
+		</main>
+		<footer></footer>
+	</body>
 </html>
