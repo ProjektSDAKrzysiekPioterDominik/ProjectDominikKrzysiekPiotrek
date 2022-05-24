@@ -1,0 +1,107 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.shadow {
+  background-color: rgba(232, 24, 24, 0.8);
+}
+
+body {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #333;
+}
+
+nav {
+  text-transform: uppercase;
+  z-index: 1;
+  -webkit-transition: background-color 0.6s;
+  transition: background-color 0.6s;
+}
+
+nav .container .navbar-toggler {
+  color: #ddd;
+}
+
+nav .container a {
+  font-weight: bold;
+}
+
+nav .container a span {
+  color: deepskyblue;
+}
+
+nav .container a,
+nav .container .nav-item {
+  color: #ddd;
+}
+
+nav .container .collapse .navbar-nav .active {
+  color: deepskyblue;
+}
+
+header .hero-img {
+  position: relative;
+  height: 100vh;
+  background-image: url("../img/green-4721381_1920.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 0;
+  background-position: center;
+}
+
+header .hero-shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: -10;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+header .hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 5;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+header .hero-text h1 {
+  color: #ddd;
+}
+
+header .hero-text h1 span {
+  color: deepskyblue;
+}
+
+header .hero-text p {
+  color: #ddd;
+}
+
+.discounts {
+  text-align: center;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.search-engine h2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #ddd;
+}
+
+.search-engine p {
+  text-align: center;
+  color: #ddd;
+  font-size: 40px;
+}
+/*# sourceMappingURL=style.css.map */
