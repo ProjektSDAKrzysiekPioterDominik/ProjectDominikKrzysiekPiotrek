@@ -1,260 +1,234 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="pl">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>TeleKurwisie</title>
-		<link rel="stylesheet"  href="{%  static  'css/style.css'  %}">
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+			crossorigin="anonymous"
+		/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
 			rel="stylesheet"
 		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+		/>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+		<link rel="stylesheet" href="./html,csss/css/style.css" />
 		<script
 			src="https://kit.fontawesome.com/e72b2f82ff.js"
 			crossorigin="anonymous"
 		></script>
-		<script src="./main.js"></script>
 	</head>
 	<body>
-		<nav>
-			<div class="title">
-				<a href="http://127.0.0.1:8000/">
-				<p>Tele<span>Kurwisie</span></p>
-				</a>
-			</div>
-			<div class="user-item login">
-				<a href="shop-user/login/">
-				<p><i class="fa-solid fa-user"></i>Zaloguj się</p>
-				</a>
+		<nav class="navbar navbar-expand-lg position-fixed top-0 w-100 py-3">
+			<div class="container">
+				<a class="navbar-brand" href="#"
+					><i class="fa-brands fa-earlybirds"></i> Tele<span>Kurwisie</span></a
+				>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<i class="fa-solid fa-bars"></i>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+							<a class="nav-link active" href="#home">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#discounts">zniżki</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#search-engine">Wyszukiwarka</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#categories">Kategorie produktów</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link">Kontakt</a>
+						</li>
+					</ul>
 				</div>
-			<div class="user-item basket">
-				<i class="fa-solid fa-basket-shopping"></i>Koszyk
 			</div>
 		</nav>
-		<aside>
-			<div class="works">
-				<p class="first">działy</p>
-				<p class="second">korzyści</p>
+		<header id="home">
+			<div class="hero-img py-5 bg-light">
+				<div class="hero-shadow"></div>
+				<div class="hero-text">
+					<h1>Witajcie w Tele<span>Kurwisie</span></h1>
+					<p>Tutaj znajdziesz wszystkie legalne produkty</p>
+				</div>
 			</div>
-			<hr />
-			<div class="list">
-				<ul>
-					<li>
-						<a href=""><i class="fa-solid fa-computer"></i>Elektronika</a>
-                        <div class="mega-menu">
-                            <div class="phones">
-                                <ol><p>Telefony i akcesoria</p>
-                                <a href="#"><li>Smartfony</li></a>
-                                <a href="#"><li>Etui, pokrowce</li></a>
-                                <a href="#"><li>Smartwatche</li></a>
-                                <a href="#"><li>Tablety</li></a>
-                            </ol>
-                            </div>
-                            <div class="computers">
-                                <ol>
-                                    <p>Komputery</p>
-                                    <a href="#"><li>Laptopy</li></a>
-                                    <a href="#"><li>Części do laptopów</li></a>
-                                    <a href="#"><li>Komputery stacjonarne</li></a>
-                                    <a href="#"><li>Podzespoły komputerowe</li></a>
-                                    <a href="#"><li>Drukarki i skanery</li></a>
-                                </ol>
-                            </div>
-                            <div class="tv">
-                                <ol>
-                                    <p>Telewizory i akcesoria</p>
-                                    <a href="#"><li>Telewizory</li></a>
-                                    <a href="#"><li>Projektory</li></a>
-                                    <a href="#"><li>Słuchawki</li></a>
-                                    <a href="#"><li>Kino domowe</li></a>
-                                    <a href="#"><li>Audio dla domu</li></a>
-                                </ol>
-                            </div>
-                            <div class="Konsols">
-                                <ol>
-                                    <p>Konsole</p>
-                                    <a href="#"><li>PLayStation</li></a>
-                                    <a href="#"><li>Xbox</li></a>
-                                    <a href="#"><li>Nintendo Switch</li></a>
-                                </ol>
-                            </div>
-                        </div>
-
-					</li>
-					<li>
-						<a href="#"><p><i class="fa-solid fa-shirt"></i>Moda</p></a>
-                        <div class="mega-menu2">
-                            <div class="she">
-                            <ol>
-                                <p>Ona</p>
-                                <a href="#"><li>Odzież damska</li></a>
-                                <a href="#"><li>Buty damskie</li></a>
-                                <a href="#"><li>Bielizna damska</li></a>
-                                <a href="#"><li>zegarki damskie</li></a>
-                                <a href="#"><li>Biżuteria damska</li></a>
-                            </ol>
-                        </div>
-                        <div class="he">
-                            <ol>
-                                <p>On</p>
-                                <a href="#"><li>Odzież męska</li></a>
-                                <a href="#"><li>Buty męskie</li></a>
-                                <a href="#"><li>Bielizna męska</li></a>
-                                <a href="#"><li>zegarki męskie</li></a>
-                                <a href="#"><li>Biżuteria męska</li></a>
-                            </ol>
-                        </div>
-                        <div class="child">
-                            <ol>
-                                <p>Ona</p>
-                                <a href="#"><li>Odzież dziecięca</li></a>
-                                <a href="#"><li>Buty dziecięce</li></a>
-                                <a href="#"><li>Bielizna dziecięca</li></a>
-                                <a href="#"><li>Odzież niemowlęca</li></a>
-                                <a href="#"><li>Buty sportowe dla dzieci</li></a>
-                            </ol>
-                        </div>
-                        <div class="Promo">
-                            <ol>
-                                <p>Ona</p>
-                                <a href="#"><li>Odzież męska</li></a>
-                                <a href="#"><li>Obuwie</li></a>
-                                <a href="#"><li>bielizna damska</li></a>
-                                <a href="#"><li>zegarki</li></a>
-                                <a href="#"><li>Biżuteria</li></a>
-                            </ol>
-                        </div>
-                    </div>
-                    </li>
-
-					<li>
-						<a href="#"><p><i class="fa-solid fa-house"></i>Dom i Ogród</p></a>
-                        <div class="mega-menu3">
-                            <div class="equipment"></div>
-                            <ol>
-                                <p>Wyposażenie</p>
-                                <a href="#"><li>Dekoracje</li></a>
-                                <a href="#"><li>Dywany</li></a>
-                                <a href="#"><li>Pościele i koce</li></a>
-                                <a href="#"><li>Zasłony</li></a>
-                                <a href="#"><li>Garnki i patelnie</li></a>
-                                <a href="#"><li>Zastawa stołowa</li></a>
-                                <a href="#"><li>Przybory kuchenne</li></a>
-                            </ol>
-                            <div class="tools"></div>
-                            <ol>
-                                <p>Narzędzia</p>
-                                <a href="#"><li>Wkrętarki</li></a>
-                                <a href="#"><li>piły</li></a>
-                                <a href="#"><li>Szlifierki</li></a>
-                                <a href="#"><li>Spawarki</li></a>
-                                <a href="#"><li>Młotowiertarki</li></a>
-                                <a href="#"><li>Przyrządy miernicze</li></a>
-                                <a href="#"><li>Urządzenia czyszczące</li></a>
-                            </ol>
-                            <div class="furniture"></div>
-                            <ol>
-                                <p>Meble</p>
-                                <a href="#"><li>Dekoracje</li></a>
-                                <a href="#"><li>Dywany</li></a>
-                                <a href="#"><li>Pościele i koce</li></a>
-                                <a href="#"><li>Zasłony</li></a>
-                                <a href="#"><li>Garnki i patelnie</li></a>
-                                <a href="#"><li>Zastawa stołowa</li></a>
-                                <a href="#"><li>Przybory kuchenne</li></a>
-                            </ol>
-                        </div>
-					</li>
-					<li>
-						<a href="#"><p><i class="fa-solid fa-baby"></i>Dziecko</p></a>
-					</li>
-					<li>
-						<a href="#"><p><i class="fa-solid fa-heart"></i></i>Zdrowie</p></a>
-					</li>
-					<li>
-						<a href="#"><p><i class="fa-solid fa-baseball-bat-ball"></i>Sport i Rozrywka</p></a>
-					</li>
-					<li>
-						<a href="#"><p><i class="fa-solid fa-car"></i>Motoryzacja</p></a>
-					</li>
-					<li>
-						<a href="#"><p><i class="fa-solid fa-house-chimney-user"></i>Nieruchomości</p></a>
-					</li>
-					<li>
-						<a href="#"><p><i class="fa-solid fa-utensils"></i>Żywność</p></a>
-					</li>
-				</ul>
-			</div>
-		</aside>
-		<div class="ad">
-			<div class="text">
-				<p>Miejsce na Twoją reklame</p>
-			</div>
-		</div>
+		</header>
 		<main>
-			<div class="upperMain">
-				<label id="name">Czego szukasz?</label>
-
-				<input type="text" id="search" />
-				<button class="btn-search">Szukaj</button>
-				<label for="product-select"></label>
-				<select id="product-select">
-					<option value="all">Wszystkie Kategorie</option>
-					<optgroup label="Kategorie">
-						<option>Kategoria 1</option>
-						<option>Kategoria 2</option>
-						<option>Kategoria 3</option>
-						<option>Kategoria 4</option>
-						<option>Kategoria 5</option>
-						<option>Kategoria 6</option>
-						<option>Kategoria 7</option>
-					</optgroup>
-					<optgroup label="Inne Opcje">
-						<option>Opcja 1</option>
-						<option>Opcja 2</option>
-						<option>Opcja 3</option>
-						<option>Opcja 4</option>
-					</optgroup>
-				</select>
-			</div>
-			<div class="current-promotions">
+			<section id="discounts" class="discounts py-5 bg-light">
 				<h2>Aktualne zniżki</h2>
-				<div class="image-promotions">
-					<img class="image1" src="./img/TELETUBIES.jpg" alt="teletubisie 1" />
-					<img
-						class="image2"
-						src="./img/teletubisie 2.jpg"
-						alt="teletubisie 2"
-					/>
-					<img
-						class="image3"
-						src="./img/teletubisie 3.jpg"
-						alt="teletubisie 3"
-					/>
-					<img
-						class="image4"
-						src="./img/teletubisie 4.jpg"
-						alt="teletubisie 4"
-					/>
-					<img
-						class="image5"
-						src="./img/teletubisie 5.jpg"
-						alt="teletubisie 5"
-					/>
+				<div class="container pb-4"><div class="card-group d-lg-none">
+						<div class="card me-sm-5">
+							<img src="./html,csss/img/monkey-small.jpg" class="card-img-top" alt="monkey" />
+							<div class="card-body">
+								<h5 class="card-title">zniżka na małpę</h5>
+								<p class="card-text">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quod odio error repellat corrupti. Cumque modi quos reiciendis alias possimus.
+								</p>
+							</div>
+						</div>
+						<div class="card me-sm-5">
+							<img src="./html,csss/img/kermit-small.jpg" class="card-img-top" alt="kermit" />
+							<div class="card-body">
+								<h5 class="card-title">zniżka na kermita</h5>
+								<p class="card-text">
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita veniam rerum non similique nulla autem, quod officiis id amet quos.
+								</p>
+							</div>
+						</div>
+						<div class="card">
+							<img src="./html,csss/img/rabbit-small.jpg" class="card-img-top" alt="rabbit" />
+							<div class="card-body">
+								<h5 class="card-title">zniżka na znalezienie partnera/partnerki</h5>
+								<p class="card-text">
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita veniam rerum non similique nulla autem, quod officiis id amet quos.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Portfolio na desktop -->
+					<div id="carouselExampleCaptions" class="carousel slide d-none d-lg-block" data-bs-ride="false">
+						<div class="carousel-indicators">
+							<button
+								type="button"
+								data-bs-target="#carouselExampleCaptions"
+								data-bs-slide-to="0"
+								class="active"
+								aria-current="true"
+								aria-label="Slide 1"
+							></button>
+							<button
+								type="button"
+								data-bs-target="#carouselExampleCaptions"
+								data-bs-slide-to="1"
+								aria-label="Slide 2"
+							></button>
+							<button
+								type="button"
+								data-bs-target="#carouselExampleCaptions"
+								data-bs-slide-to="2"
+								aria-label="Slide 3"
+							></button>
+						</div>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="./html,csss/img/monkey-big.jpg" class="d-block w-100" alt="a5 biale" />
+								<div class="carousel-caption d-none d-md-block">
+									<h5>zniżka na małpę</h5>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam obcaecati corrupti in nesciunt! Nobis, facere eveniet omnis numquam pariatur porro!</p>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img src="./html,csss/img/kermit-big.jpg" class="d-block w-100" alt="a5 niebieskie" />
+								<div class="carousel-caption d-none d-md-block">
+									<h5>zniżka na kermita</h5>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt harum exercitationem repellat animi, dolor quo nobis sint vel et ea.</p>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img src="./html,csss/img/rabbit-big.jpg" class="d-block w-100" alt="rabbit" />
+								<div class="carousel-caption d-none d-md-block">
+									<h5>zniżka na znalezienie partnera/partnerki</h5>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt harum exercitationem repellat animi, dolor quo nobis sint vel et ea.</p>
+								</div>
+							</div>
+						</div>
+						<button
+							class="carousel-control-prev"
+							type="button"
+							data-bs-target="#carouselExampleCaptions"
+							data-bs-slide="prev"
+						>
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button
+							class="carousel-control-next"
+							type="button"
+							data-bs-target="#carouselExampleCaptions"
+							data-bs-slide="next"
+						>
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
 				</div>
-				<div class="list-promotions">
-					<button class="btn-promo">Zniżka 1</button>
-					<button class="btn-promo">Zniżka 2</button>
-					<button class="btn-promo">Zniżka 3</button>
-					<button class="btn-promo">Zniżka 4</button>
-					<button class="btn-promo">Zniżka 5</button>
+			</section></div>
+			</section>
+			<section id="search-engine" class="search-engine py-5">
+                <h2>Wyszukiwarka</h2>
+				<div class="container">
+                    <div class="input-group mb-3">
+					<input
+						type="text"
+						class="form-control"
+						placeholder="Wyszukaj produktu"
+						
+						aria-describedby="button-addon2"
+					/>
+					<button
+						class="btn btn-outline-secondary"
+						type="button"
+						id="button-addon2"
+					>
+						Szukaj
+					</button>
 				</div>
-			</div>
+                <div class="empty">
+                    <p>Miejsce do pojawiania się produktów po ich wyszukaniu</p>
+                </div>
+                </div>
+			</section>
+            <section class="categories"></section>
 		</main>
-		<footer></footer>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init({
+				startEvent: 'DOMContentLoaded',
+				offset: 200,
+				once: true,
+			});
+		</script>
+		<script
+			type="text/javascript"
+			src="//code.jquery.com/jquery-1.11.0.min.js"
+		></script>
+		<script
+			type="text/javascript"
+			src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+		></script>
+		<script
+			type="text/javascript"
+			src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+		></script>
+		<script src="./js/slicksettings.js"></script>
+		<script src="./html,csss/js/script.js"></script>
 	</body>
 </html>
