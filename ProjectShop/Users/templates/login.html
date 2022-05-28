@@ -1,0 +1,19 @@
+
+
+<h2>Sign in</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+</form>
+<p>Nie masz konta?</p>
+<a href="http://127.0.0.1:8000/shop-user/sign-up/">
+    <p>Zarejestuj się!</p>
+</a>
+
+<a href="http://127.0.0.1:8000/">
+    <p>Powrot na strone glowna</p>
+</a>
+
+<p>Nie pamiętasz hasła?</p>
+<p>To masz problem, prace są w toku...</p>

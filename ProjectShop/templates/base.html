@@ -1,87 +1,234 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="pl">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>TeleKurwisie</title>
-		<link rel="stylesheet"  href="{%  static  'css/style.css'  %}">
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+			crossorigin="anonymous"
+		/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
 			rel="stylesheet"
 		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+		/>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+		<link rel="stylesheet" href="./html,csss/css/style.css" />
 		<script
 			src="https://kit.fontawesome.com/e72b2f82ff.js"
 			crossorigin="anonymous"
 		></script>
 	</head>
 	<body>
-		<nav>
-			<div class="title">
-				<p>Tele<span>Kurwisie</span></p>
-			</div>
-			<div class="user-item login">
-				<p><i class="fa-solid fa-user"></i>Zaloguj się</p>
-			</div>
-			<div class="user-item basket">
-				<i class="fa-solid fa-basket-shopping"></i>Koszyk
+		<nav class="navbar navbar-expand-lg position-fixed top-0 w-100 py-3">
+			<div class="container">
+				<a class="navbar-brand" href="#"
+					><i class="fa-brands fa-earlybirds"></i> Tele<span>Kurwisie</span></a
+				>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<i class="fa-solid fa-bars"></i>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+							<a class="nav-link active" href="#home">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#discounts">zniżki</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#search-engine">Wyszukiwarka</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#categories">Kategorie produktów</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link">Kontakt</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</nav>
-		<aside>
-			<div class="works">
-				<p>działy</p>
-				<span>korzyści</span>
+		<header id="home">
+			<div class="hero-img py-5 bg-light">
+				<div class="hero-shadow"></div>
+				<div class="hero-text">
+					<h1>Witajcie w Tele<span>Kurwisie</span></h1>
+					<p>Tutaj znajdziesz wszystkie legalne produkty</p>
+				</div>
 			</div>
-			<hr />
-			<div class="list">
-				<ul>
-					<li>Elektronika</li>
-					<li>Moda</li>
-					<li>Dom i ogród</li>
-					<li>Dziecko</li>
-					<li>Uroda</li>
-					<li>Zdrowie</li>
-					<li>Sport i rozrywka</li>
-					<li>Motoryzacja</li>
-					<li>Nieruchomości</li>
-					<li>Żywność</li>
-				</ul>
-			</div>
-		</aside>
-		<div class="ad">
-			<div class="text">
-				<p>Reklama</p>
-			</div>
-		</div>
+		</header>
 		<main>
-			<div class="upperMain">
-				<label for="name">Czego szukasz?</label>
+			<section id="discounts" class="discounts py-5 bg-light">
+				<h2>Aktualne zniżki</h2>
+				<div class="container pb-4"><div class="card-group d-lg-none">
+						<div class="card me-sm-5">
+							<img src="./html,csss/img/monkey-small.jpg" class="card-img-top" alt="monkey" />
+							<div class="card-body">
+								<h5 class="card-title">zniżka na małpę</h5>
+								<p class="card-text">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quod odio error repellat corrupti. Cumque modi quos reiciendis alias possimus.
+								</p>
+							</div>
+						</div>
+						<div class="card me-sm-5">
+							<img src="./html,csss/img/kermit-small.jpg" class="card-img-top" alt="kermit" />
+							<div class="card-body">
+								<h5 class="card-title">zniżka na kermita</h5>
+								<p class="card-text">
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita veniam rerum non similique nulla autem, quod officiis id amet quos.
+								</p>
+							</div>
+						</div>
+						<div class="card">
+							<img src="./html,csss/img/rabbit-small.jpg" class="card-img-top" alt="rabbit" />
+							<div class="card-body">
+								<h5 class="card-title">zniżka na znalezienie partnera/partnerki</h5>
+								<p class="card-text">
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita veniam rerum non similique nulla autem, quod officiis id amet quos.
+								</p>
+							</div>
+						</div>
+					</div>
 
-				<input type="text" id="search" />
-				<label for="product-select"></label>
-				<select id="product-select">
-					<option value="all">Wszystkie Kategorie</option>
-					<optgroup label="Kategorie">
-						<option>Kategoria 1</option>
-						<option>Kategoria 2</option>
-						<option>Kategoria 3</option>
-						<option>Kategoria 4</option>
-						<option>Kategoria 5</option>
-						<option>Kategoria 6</option>
-						<option>Kategoria 7</option>
-					</optgroup>
-					<optgroup label="Inne Opcje">
-						<option>Opcja 1</option>
-						<option>Opcja 2</option>
-						<option>Opcja 3</option>
-						<option>Opcja 4</option>
-					</optgroup>
-				</select>
-			</div>
+					<!-- Portfolio na desktop -->
+					<div id="carouselExampleCaptions" class="carousel slide d-none d-lg-block" data-bs-ride="false">
+						<div class="carousel-indicators">
+							<button
+								type="button"
+								data-bs-target="#carouselExampleCaptions"
+								data-bs-slide-to="0"
+								class="active"
+								aria-current="true"
+								aria-label="Slide 1"
+							></button>
+							<button
+								type="button"
+								data-bs-target="#carouselExampleCaptions"
+								data-bs-slide-to="1"
+								aria-label="Slide 2"
+							></button>
+							<button
+								type="button"
+								data-bs-target="#carouselExampleCaptions"
+								data-bs-slide-to="2"
+								aria-label="Slide 3"
+							></button>
+						</div>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="./html,csss/img/monkey-big.jpg" class="d-block w-100" alt="a5 biale" />
+								<div class="carousel-caption d-none d-md-block">
+									<h5>zniżka na małpę</h5>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam obcaecati corrupti in nesciunt! Nobis, facere eveniet omnis numquam pariatur porro!</p>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img src="./html,csss/img/kermit-big.jpg" class="d-block w-100" alt="a5 niebieskie" />
+								<div class="carousel-caption d-none d-md-block">
+									<h5>zniżka na kermita</h5>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt harum exercitationem repellat animi, dolor quo nobis sint vel et ea.</p>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img src="./html,csss/img/rabbit-big.jpg" class="d-block w-100" alt="rabbit" />
+								<div class="carousel-caption d-none d-md-block">
+									<h5>zniżka na znalezienie partnera/partnerki</h5>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt harum exercitationem repellat animi, dolor quo nobis sint vel et ea.</p>
+								</div>
+							</div>
+						</div>
+						<button
+							class="carousel-control-prev"
+							type="button"
+							data-bs-target="#carouselExampleCaptions"
+							data-bs-slide="prev"
+						>
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button
+							class="carousel-control-next"
+							type="button"
+							data-bs-target="#carouselExampleCaptions"
+							data-bs-slide="next"
+						>
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+				</div>
+			</section></div>
+			</section>
+			<section id="search-engine" class="search-engine py-5">
+                <h2>Wyszukiwarka</h2>
+				<div class="container">
+                    <div class="input-group mb-3">
+					<input
+						type="text"
+						class="form-control"
+						placeholder="Wyszukaj produktu"
+						
+						aria-describedby="button-addon2"
+					/>
+					<button
+						class="btn btn-outline-secondary"
+						type="button"
+						id="button-addon2"
+					>
+						Szukaj
+					</button>
+				</div>
+                <div class="empty">
+                    <p>Miejsce do pojawiania się produktów po ich wyszukaniu</p>
+                </div>
+                </div>
+			</section>
+            <section class="categories"></section>
 		</main>
-		<footer></footer>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init({
+				startEvent: 'DOMContentLoaded',
+				offset: 200,
+				once: true,
+			});
+		</script>
+		<script
+			type="text/javascript"
+			src="//code.jquery.com/jquery-1.11.0.min.js"
+		></script>
+		<script
+			type="text/javascript"
+			src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+		></script>
+		<script
+			type="text/javascript"
+			src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+		></script>
+		<script src="./js/slicksettings.js"></script>
+		<script src="./html,csss/js/script.js"></script>
 	</body>
 </html>
