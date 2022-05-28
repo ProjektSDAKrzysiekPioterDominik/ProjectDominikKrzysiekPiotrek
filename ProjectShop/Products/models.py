@@ -35,7 +35,7 @@ class Products(models.Model):
     Id_client = models.ForeignKey(Client, on_delete=models.CASCADE,null =True)
 
     def __str__(self):
-        return f"{self.Product_name} - {self.Price} - {self.Is_listed} - {self.Image}"
+        return f"{self.Product_name}"
 
     class Meta:
         verbose_name = "Product"

@@ -1,0 +1,12 @@
+
+<div>
+<form action="{% url 'search_products' %}" method = 'get'>
+    {% csrf_token %}
+    <input type="text" name = "q" placeholder="Search Product" />
+    <button type="submit">Wyszukaj!</button>
+</form>
+    {% for i in products %}
+        <h1>{{ i.Product_name }} </h1>
+
+    {% endfor %}
+</div>
