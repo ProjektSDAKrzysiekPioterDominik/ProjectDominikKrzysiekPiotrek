@@ -4,9 +4,11 @@
 <form action="{% url 'search_products' %}" method = 'get'>
     {% csrf_token %}
     <input type="text" name = "q" placeholder="Search Product" />
-    <button type="submit">Wyszukaj!</button>
+    <button id = 'button123' type="submit">Wyszukaj!</button>
 </form>
+    <p id = "finded_obj"> Liczba wyszukanych obiektów: {{ products|length }}  </p>
     {% for i in products %}
+        <h1>{{ i.Product_name }} </h1>
         <h1>{{ i.Product_name }} </h1>
 
     {% endfor %}
