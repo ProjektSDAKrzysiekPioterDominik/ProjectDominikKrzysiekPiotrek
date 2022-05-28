@@ -11,7 +11,7 @@ from .models import Products
 class ProductCreateView(CreateView):
     template_name = "product_form.html"
     form_class = ProductForm
-    success_url = reverse_lazy("products_create")
+    success_url = reverse_lazy("home")
 
 
 def index(request):
@@ -30,6 +30,6 @@ class ProductSearchView(ListView):
     def get_queryset(self):
         query = self.request.GET.get('q')
         if query:
-            return Products.objects.filter(Product_name__icontains=query).order_by('-Date_added')
+            return Products.objects.filter(Product_name__icontains=query).filter(Is_listed = True).order_by('-Date_added')
         else:
             return Products.objects.all()

@@ -8,7 +8,7 @@
     <button id = 'button123' type="submit">Wyszukaj!</button>
 </form>
 
-    <p id = "finded_obj"> Liczba wyszukanych obiektów  </p>
+    <p id = "finded_obj"> Liczba wyszukanych obiektów  {{ Product|length }}</p>
     {% for i in products %}
     {% if i.Is_listed %}
             <h1>{{ i.Product_name }} </h1>
