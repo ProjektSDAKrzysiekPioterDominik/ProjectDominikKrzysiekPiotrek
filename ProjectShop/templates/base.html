@@ -182,20 +182,17 @@
                 <h2>Wyszukiwarka</h2>
 				<div class="container">
                     <div class="input-group mb-3">
-					<input
-						type="text"
-						class="form-control"
-						placeholder="Wyszukaj produktu"
-						
-						aria-describedby="button-addon2"
-					/>
-					<button
-						class="btn btn-outline-secondary"
-						type="button"
-						id="button-addon2"
-					>
-						Szukaj
-					</button>
+						{% block search %}
+						<form action="{% url 'search_products' %}" method = 'get'>
+							{% csrf_token %}
+							<input type="text" name = "q" placeholder="Search Product" />
+							<button type="submit">Wyszukaj!</button>
+						</form>
+						{% for i in products %}
+							<h1>{{ i.Product_name }} </h1>
+
+						{% endfor %}
+						{% endblock %}
 				</div>
                 <div class="empty">
                     <p>Miejsce do pojawiania się produktów po ich wyszukaniu</p>
