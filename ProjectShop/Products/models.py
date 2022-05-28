@@ -11,28 +11,34 @@ class Client(models.Model):
     Phone = models.TextField(max_length = 20)
     Birth_date = models.DateField()
     City = models.TextField(max_length = 20)
-
+    
     class Meta:
         verbose_name = "Client"
         verbose_name_plural = "Clients"
 
+
 class Categories(models.Model):
     Name = models.CharField(max_length = 100)
+
+    def __str__(self):
+        return f"{self.Name}"
 
     class Meta:
         verbose_name = "Category"
         verbose_name_plural = "Categories"
 
-
+        
 class Products(models.Model):
     Id_category = models.ForeignKey(Categories,on_delete=models.CASCADE,null= True)
+
     Product_name = models.CharField(max_length=100)
-    Price = models.DecimalField(default=0,validators=[MinValueValidator(0.01)], max_digits=12, decimal_places=2)
+    Price = models.DecimalField(default=0, validators=[MinValueValidator(0.01)], max_digits=12, decimal_places=2)
     Image = models.ImageField(blank=True)
     Describe = models.TextField(max_length=500)
     Date_added = models.DateField()
     Is_listed = models.BooleanField()
-    Id_client = models.ForeignKey(Client, on_delete=models.CASCADE,null =True)
+    Id_client = models.ForeignKey(Client, on_delete=models.CASCADE, null=True, blank=True)
+
 
     def __str__(self):
         return f"{self.Product_name} - {self.Price} - {self.Is_listed} - {self.Image}"
