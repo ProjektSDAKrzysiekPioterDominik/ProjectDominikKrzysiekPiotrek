@@ -11,7 +11,7 @@ from .models import Products
 class ProductCreateView(CreateView):
     template_name = "product_form.html"
     form_class = ProductForm
-    success_url = reverse_lazy("book_create")
+    success_url = reverse_lazy("products_create")
 
 
 def index(request):
