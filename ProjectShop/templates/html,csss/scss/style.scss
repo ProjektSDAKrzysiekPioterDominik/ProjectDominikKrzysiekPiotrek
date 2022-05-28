@@ -150,8 +150,11 @@ ul {
 			.single-cta {
 				color: deepskyblue;
 				font-size: 30px;
-				float: left;
 				margin-top: 8px;
+				i{
+					display: grid;
+					margin-bottom: 15px;
+				}
 				.cta-text {
 					padding-left: 15px;
 					display: inline-block;
@@ -242,16 +245,33 @@ ul {
 	.footer-section{
 		.container{
 			margin: 0 auto;
+			.row{
+				.single-cta{
+					i{
+						padding: 0 30px;
+					}
+					.cta-text{
+						padding: 0 30px;
+					}
+				}
+			}
 			.footer-content{
 				.container{
 					.footer-logo{
 						a{
 							font-size: 30px;
 						}
+						
 					}
 				}
 			}
 		}
+		
+	}
+}
+
+@media (min-width:280px){
+	header{
 		
 	}
 }

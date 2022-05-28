@@ -159,8 +159,13 @@ ul {
 .footer-section .container .footer-cta .single-cta {
   color: deepskyblue;
   font-size: 30px;
-  float: left;
   margin-top: 8px;
+}
+
+.footer-section .container .footer-cta .single-cta i {
+  display: -ms-grid;
+  display: grid;
+  margin-bottom: 15px;
 }
 
 .footer-section .container .footer-cta .single-cta .cta-text {
@@ -255,6 +260,12 @@ ul {
 @media (min-width: 320px) {
   .footer-section .container {
     margin: 0 auto;
+  }
+  .footer-section .container .row .single-cta i {
+    padding: 0 30px;
+  }
+  .footer-section .container .row .single-cta .cta-text {
+    padding: 0 30px;
   }
   .footer-section .container .footer-content .container .footer-logo a {
     font-size: 30px;
