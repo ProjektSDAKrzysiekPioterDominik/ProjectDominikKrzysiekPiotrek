@@ -1,7 +1,10 @@
 from django.urls import path
 
-from Products.views import ProductCreateView
+
+from Products.views import ProductCreateView #type: ignore
+
 from Products.views import index
+
 
 
 urlpatterns = [
