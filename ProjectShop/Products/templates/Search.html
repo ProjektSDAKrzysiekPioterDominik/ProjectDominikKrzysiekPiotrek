@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block search %}
+<div>
+<form action="{% url 'search_products' %}" method = 'get'>
+    {% csrf_token %}
+    <input type="text" name = "q" placeholder="Search Product" />
+    <button id = 'button123' type="submit">Wyszukaj!</button>
+</form>
+
+    <p id = "finded_obj"> Liczba wyszukanych obiektów  {{ products|length }}</p>
+    {% for i in products %}
+    {% if i.Is_listed %}
+            <h1>{{ i.Product_name }} </h1>
+            <h1>{{ i.Price }} </h1>
+            {% if i.Image %}
+            <img src="{{ i.Image.url }}"  alt="Zdjecie Vibratora, ktore zajebali" />
+            {% else %}
+            <p>Zjdecie jakies zule ukradly</p>
+            {% endif %}
+            <h1>{{ i.Describe }}</h1>
+            <h1>{{ i.Date_added }}</h1>
+    {% endif %}
+    {% endfor %}
+</div>
+{% endblock %}
