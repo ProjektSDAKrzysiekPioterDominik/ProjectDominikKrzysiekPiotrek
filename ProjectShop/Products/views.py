@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 from django.views.generic import CreateView, ListView
 from django.urls import reverse_lazy
-from Products.forms import ProductForm
+from Products.forms import ProductForm  #type: ignore
 from django.http import HttpResponse
 from .models import Products
 
@@ -30,6 +30,6 @@ class ProductSearchView(ListView):
     def get_queryset(self):
         query = self.request.GET.get('q')
         if query:
-            return Products.objects.filter(Product_name__icontains=query).filter(Is_listed = True).order_by('-Date_added')
+            return Products.objects.filter(Product_name__icontains=query).order_by('-Date_added')
         else:
             return Products.objects.all()
