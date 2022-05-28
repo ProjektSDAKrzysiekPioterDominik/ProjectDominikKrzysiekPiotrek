@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="pl">
 	<head>
 		<meta charset="UTF-8" />
@@ -22,7 +23,7 @@
 			href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
 		/>
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-		<link rel="stylesheet" href="./html,csss/css/style.css" />
+		<link rel="stylesheet" href="{% static 'css/style.css' %}" />
 		<script
 			src="https://kit.fontawesome.com/e72b2f82ff.js"
 			crossorigin="anonymous"
@@ -80,7 +81,7 @@
 				<h2>Aktualne zniżki</h2>
 				<div class="container pb-4"><div class="card-group d-lg-none">
 						<div class="card me-sm-5">
-							<img src="./html,csss/img/monkey-small.jpg" class="card-img-top" alt="monkey" />
+							<img src="{% static 'img/monkey-small.jpg' %}" class="card-img-top" alt="monkey" />
 							<div class="card-body">
 								<h5 class="card-title">zniżka na małpę</h5>
 								<p class="card-text">
@@ -89,7 +90,7 @@
 							</div>
 						</div>
 						<div class="card me-sm-5">
-							<img src="./html,csss/img/kermit-small.jpg" class="card-img-top" alt="kermit" />
+							<img src="{% static 'img/kermit-small.jpg' %}" class="card-img-top" alt="kermit" />
 							<div class="card-body">
 								<h5 class="card-title">zniżka na kermita</h5>
 								<p class="card-text">
@@ -98,7 +99,7 @@
 							</div>
 						</div>
 						<div class="card">
-							<img src="./html,csss/img/rabbit-small.jpg" class="card-img-top" alt="rabbit" />
+							<img src="{% static 'img/rabbit-small.jpg' %}" class="card-img-top" alt="rabbit" />
 							<div class="card-body">
 								<h5 class="card-title">zniżka na znalezienie partnera/partnerki</h5>
 								<p class="card-text">
@@ -134,21 +135,21 @@
 						</div>
 						<div class="carousel-inner">
 							<div class="carousel-item active">
-								<img src="./html,csss/img/monkey-big.jpg" class="d-block w-100" alt="a5 biale" />
+								 <img src="{% static 'img/monkey-big.jpg' %}" class="d-block w-100" alt="a5 biale" />
 								<div class="carousel-caption d-none d-md-block">
 									<h5>zniżka na małpę</h5>
 									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam obcaecati corrupti in nesciunt! Nobis, facere eveniet omnis numquam pariatur porro!</p>
 								</div>
 							</div>
 							<div class="carousel-item">
-								<img src="./html,csss/img/kermit-big.jpg" class="d-block w-100" alt="a5 niebieskie" />
+								 <img src="{% static 'img/kermit-big.jpg' %}" class="d-block w-100" alt="a5 niebieskie" />
 								<div class="carousel-caption d-none d-md-block">
 									<h5>zniżka na kermita</h5>
 									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt harum exercitationem repellat animi, dolor quo nobis sint vel et ea.</p>
 								</div>
 							</div>
 							<div class="carousel-item">
-								<img src="./html,csss/img/rabbit-big.jpg" class="d-block w-100" alt="rabbit" />
+								<img src="{% static 'img/rabbit-big.jpg' %}" class="d-block w-100" alt="rabbit" />
 								<div class="carousel-caption d-none d-md-block">
 									<h5>zniżka na znalezienie partnera/partnerki</h5>
 									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt harum exercitationem repellat animi, dolor quo nobis sint vel et ea.</p>
@@ -229,6 +230,6 @@
 			src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
 		></script>
 		<script src="./js/slicksettings.js"></script>
-		<script src="./html,csss/js/script.js"></script>
+		<script src="./js/script.js"></script>
 	</body>
 </html>
