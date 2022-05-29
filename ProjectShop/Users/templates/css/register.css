@@ -31,9 +31,6 @@ hr {
 	left: 50%;
 	transform: translate(-50%);
 }
-.container .name {
-	background-color: red;
-}
 .container input {
 	height: 40px;
 }
@@ -87,7 +84,7 @@ hr {
 .container .button .register {
 	background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
 	position: absolute;
-	top: 350px;
+	bottom: 30%;
 	left: 50%;
 	transform: translateX(-50%);
 	width: 200px;
@@ -101,4 +98,71 @@ hr {
 	text-transform: uppercase;
 	font-size: 12px;
 	font-weight: bold;
+}
+
+@media (min-width: 320px) {
+	.container {
+		top: 0;
+		height: 100vh;
+		width: 100vw;
+	}
+	.container .title {
+		padding-top: 26px;
+	}
+	.container .name input {
+		left: 50%;
+		top: 11%;
+		width: 75%;
+		transform: translateX(-50%);
+	}
+	.container .surname input {
+		position: absolute;
+		/* right: 5%; */
+		left: 50%;
+		transform: translateX(-50%);
+		top: 21%;
+		width: 75%;
+	}
+	.container .phone input {
+		position: absolute;
+		left: 50%;
+		top: 31%;
+		width: 75%;
+		transform: translateX(-50%);
+	}
+	.container .email input {
+		position: absolute;
+		top: 41%;
+		left: 50%;
+		width: 75%;
+		transform: translateX(-50%);
+	}
+	.container .password input {
+		position: absolute;
+		top: 51%;
+		width: 75%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.container .comeback {
+		position: absolute;
+		text-align: center;
+		bottom: 20px;
+		left: 50%;
+		width: 75%;
+		transform: translateX(-50%);
+	}
+	.container .button .register a {
+		font-size: 14px;
+	}
+}
+
+@media (min-width: 992px) {
+	.container .name input,
+	.container .surname input,
+	.container .phone input,
+	.container .email input,
+	.container .password input {
+		width: 50%;
+	}
 }

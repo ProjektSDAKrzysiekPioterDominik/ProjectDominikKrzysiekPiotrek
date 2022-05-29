@@ -286,6 +286,9 @@ ul {
 }
 
 @media (min-width: 320px) {
+  .container {
+    width: 100vw;
+  }
   .footer-section .container {
     margin: 0 auto;
   }
