@@ -6,6 +6,9 @@ from Users.forms import SignUpForm #type: ignore
 from django.contrib import auth
 from django.shortcuts import render
 
+
+from django.contrib.auth.decorators import login_required
+
 class Login_user(LoginView):
     template_name = 'login.html'
 
@@ -18,6 +21,7 @@ def logoutview(request):
     auth.logout(request);
     return redirect('/')
 
+@login_required(login_url='login')
 def user_side(request):
     data = {}
     return render(request, 'user_side.html', data)
