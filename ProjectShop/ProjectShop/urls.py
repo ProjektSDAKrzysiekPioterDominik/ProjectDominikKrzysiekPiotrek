@@ -14,8 +14,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('products/', include('Products.urls')),
     path('products-list/', index, name='index'),
-    path('categorie/<id>/',categorie, name='categorie'),
-    path('product/<id>/',product, name='product'),
+    #path('categorie/<id>/', categorie, name='categorie'),
+    path('categorie/', categorie, name='categorie'),
+    path('product/<id>/', product, name='product'),
 
     # path('product-create', ProductCreateView.as_view(), name="product_create"),
 ]

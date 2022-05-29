@@ -90,10 +90,4 @@ class History_transactions(models.Model):
         verbose_name = "History_transaction"
         verbose_name_plural = "History_transactions"
 
-class Delivery(models.Model):
-    Name = models.TextField(max_length = 1000)
-    Surname = models.TextField(max_length = 1000)
-    Company_name = models.TextField(max_length = 1000)
-    Phone = models.TextField(max_length = 1000)
-    Email = models.TextField(max_length = 1000)
 

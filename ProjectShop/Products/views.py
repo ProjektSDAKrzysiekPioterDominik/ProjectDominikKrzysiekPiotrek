@@ -25,23 +25,28 @@ def index(request):
     have = Products.objects.filter(Describe__icontains='lekko')
     #return HttpResponse(all_products)
 
-    #context = {'categories' : categories}
-    return render(request,)
+    data = {'all_products': all_products}
+    return render(request, 'szablon.html', data)
 
-def categorie(request, id):
-    categorie_user = Categories.objects.get(pk=id)
-    return HttpResponse(categorie_user.Name)
+def all_products_for_category(request, category_id):
+    all_products_for_category = Products.objects.filter(Id_category=category_id)
+    return render(request, 'all-products-for-categories.html', {"products": all_products_for_category})
+
+def categorie(request):
+    categories = Categories.objects.all()
+    data = {'categories': categories}
+    return render(request, 'categories.html', data)
 
 def product(request,id):
     product_user = Products.objects.get(pk=id)
-    textwrap = "<h1>" + str(product_user) + "</h1>" + \
-               "<p>" + str(product_user.Describe) + "</p>" + \
-               "<p>" + str(product_user.Price) + "</p>"
-    return HttpResponse(product_user)
+    data = {'product_user': product_user}
+    return render(request, 'produkt.html', data)
 
 def get_hello(request):
-    data = {}
+    categories = Categories.objects.all()
+    data = {'categories': categories}
     return render(request, 'base.html', data)
+
 
 class ProductSearchView(ListView):
     model = Products

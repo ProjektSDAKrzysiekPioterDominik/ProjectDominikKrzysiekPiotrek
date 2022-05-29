@@ -228,17 +228,13 @@
 				<h2>Wyszukiwarka</h2>
 				<div class="container">
 					<div class="input-group mb-3">
-						{% block search %}
+
 						<form action="{% url 'search_products' %}" method = 'get'>
 							{% csrf_token %}
 							<input type="text" name = "q" placeholder="Search Product" />
 							<button type="submit">Wyszukaj!</button>
 						</form>
-						{% for i in products %}
-							<h1>{{ i.Product_name }} </h1>
 
-						{% endfor %}
-						{% endblock %}
 				</div>
                 <div class="empty">
                     <p>Miejsce do pojawiania się produktów po ich wyszukaniu</p>
@@ -249,125 +245,22 @@
 				<div class="container">
 					<h2>Wyszukaj produktów po kategoriach</h2>
 					<div class="group d-flex justify-content-between flex-wrap">
-						<div class="btn-group">
+						{% for i in products %}
+							<h1>{{ i.Product_name }} </h1>
+
+						{% endfor %}
+						{% for i in categories %}
+
 							<button
 								type="button"
 								class="btn btn-danger dropdown-toggle"
-								data-bs-toggle="dropdown"
+
 							>
-								Kategoria 1
+							<p><a href="{% url 'all-for-category' i.id %}">  {{ i.Name }} </a></p>
+
 							</button>
-							<ul class="dropdown-menu">
-								<li><a class="dropdown-item">Podkategoria 1</a></li>
-								<li><a class="dropdown-item">Podkategoria 2</a></li>
-								<li><a class="dropdown-item">Podkategoria 3</a></li>
-								<li><a class="dropdown-item">Podkategoria 4</a></li>
-							</ul>
-						</div>
-						<div class="btn-group">
-							<button
-								type="button"
-								class="btn btn-primary dropdown-toggle"
-								data-bs-toggle="dropdown"
-							>
-								Kategoria 2
-							</button>
-							<ul class="dropdown-menu">
-								<li><a class="dropdown-item">Podkategoria 1</a></li>
-								<li><a class="dropdown-item">Podkategoria 2</a></li>
-								<li><a class="dropdown-item">Podkategoria 3</a></li>
-								<li><a class="dropdown-item">Podkategoria 4</a></li>
-							</ul>
-						</div>
-						<div class="btn-group">
-							<button
-								type="button"
-								class="btn btn-warning dropdown-toggle"
-								data-bs-toggle="dropdown"
-							>
-								Kategoria 3
-							</button>
-							<ul class="dropdown-menu">
-								<li><a class="dropdown-item">Podkategoria 1</a></li>
-								<li><a class="dropdown-item">Podkategoria 2</a></li>
-								<li><a class="dropdown-item">Podkategoria 3</a></li>
-								<li><a class="dropdown-item">Podkategoria 4</a></li>
-							</ul>
-						</div>
-						<div class="btn-group">
-							<button
-								type="button"
-								class="btn btn-success dropdown-toggle"
-								data-bs-toggle="dropdown"
-							>
-								Kategoria 4
-							</button>
-							<ul class="dropdown-menu">
-								<li><a class="dropdown-item">Podkategoria 1</a></li>
-								<li><a class="dropdown-item">Podkategoria 2</a></li>
-								<li><a class="dropdown-item">Podkategoria 3</a></li>
-								<li><a class="dropdown-item">Podkategoria 4</a></li>
-							</ul>
-						</div>
-						<div class="btn-group">
-							<button
-								type="button"
-								class="btn btn-danger dropdown-toggle"
-								data-bs-toggle="dropdown"
-							>
-								Kategoria 5
-							</button>
-							<ul class="dropdown-menu">
-								<li><a class="dropdown-item">Podkategoria 1</a></li>
-								<li><a class="dropdown-item">Podkategoria 2</a></li>
-								<li><a class="dropdown-item">Podkategoria 3</a></li>
-								<li><a class="dropdown-item">Podkategoria 4</a></li>
-							</ul>
-						</div>
-						<div class="btn-group">
-							<button
-								type="button"
-								class="btn btn-info dropdown-toggle"
-								data-bs-toggle="dropdown"
-							>
-								Kategoria 6
-							</button>
-							<ul class="dropdown-menu">
-								<li><a class="dropdown-item">Podkategoria 1</a></li>
-								<li><a class="dropdown-item">Podkategoria 2</a></li>
-								<li><a class="dropdown-item">Podkategoria 3</a></li>
-								<li><a class="dropdown-item">Podkategoria 4</a></li>
-							</ul>
-						</div>
-						<div class="btn-group">
-							<button
-								type="button"
-								class="btn btn-dark dropdown-toggle"
-								data-bs-toggle="dropdown"
-							>
-								Kategoria 7
-							</button>
-							<ul class="dropdown-menu">
-								<li><a class="dropdown-item">Podkategoria 1</a></li>
-								<li><a class="dropdown-item">Podkategoria 2</a></li>
-								<li><a class="dropdown-item">Podkategoria 3</a></li>
-								<li><a class="dropdown-item">Podkategoria 4</a></li>
-							</ul>
-						</div>
-						<div class="btn-group">
-							<button
-								type="button"
-								class="btn btn-light dropdown-toggle"
-								data-bs-toggle="dropdown"
-							>
-								Kategoria 8
-							</button>
-							<ul class="dropdown-menu">
-								<li><a class="dropdown-item">Podkategoria 1</a></li>
-								<li><a class="dropdown-item">Podkategoria 2</a></li>
-								<li><a class="dropdown-item">Podkategoria 3</a></li>
-								<li><a class="dropdown-item">Podkategoria 4</a></li>
-							</ul>
+						{% endfor %}
+
 						</div>
 					</div>
 				</div>
