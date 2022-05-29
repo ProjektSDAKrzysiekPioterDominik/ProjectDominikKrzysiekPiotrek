@@ -1,10 +1,42 @@
-<h2>Sign up</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Sign up</button>
-</form>
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rejestracja</title>
+		<link rel="stylesheet" href="./css/register.css" />
+		<link rel="shortcut icon" href="http://teletubis.pl/wp-content/uploads/2016/12/teletubisie-po.jpg" />
+		<script src="https://kit.fontawesome.com/e72b2f82ff.js" crossorigin="anonymous"></script>
+	</head>
 
-<a href="http://127.0.0.1:8000/">
-    <p>Powrot na strone glowna</p>
-</a>
+	<body>
+		<div class="container">
+			<div class="title">
+				<h2>Zarejestruj się</h2>
+                <hr>
+			</div>
+			<div class="name">
+				<input type="text" placeholder=" 🤙🏼 Podaj swoje imie..." />
+			</div>
+			<div class="surname">
+				<input type="text" placeholder=" 🤙🏼 Podaj swoje nazwisko..." />
+			</div>
+			<div class="phone">
+				<input type="tel" placeholder=" 🤙🏼 Podaj swój numer telefonu..." />
+			</div>
+			<div class="email">
+				<input type="text" placeholder=" 🤙🏼 Podaj swój email..." />
+			</div>
+			<div class="password">
+				<input type="text" placeholder=" 🤙🏼 Podaj swoje hasło..." />
+			</div>
+			<div class="button">
+				<button class="register"><a href="#">Zarejestruj się</a></button>
+			</div>
+			<div class="comeback">
+				<a href="../../templates/base.html">Powrót na stronę główną</a>
+			</div>
+		</div>
+	</body>
+</html>

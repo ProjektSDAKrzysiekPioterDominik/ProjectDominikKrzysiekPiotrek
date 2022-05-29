@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="pl">
 	<head>
 		<meta charset="UTF-8" />
@@ -24,7 +23,7 @@
 			href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
 		/>
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-		<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+		<link rel="stylesheet" href="../../css/style.css" />
 		<script
 			src="https://kit.fontawesome.com/e72b2f82ff.js"
 			crossorigin="anonymous"
@@ -86,7 +85,7 @@
 				<div class="container pb-4">
 					<div class="card-group d-lg-none">
 						<div class="card me-sm-5">
-							<img src="{% static 'img/monkey-small.jpg' %}"
+							<img src="../static/img/monkey-small.jpg"
 								 class="card-img-top"
 								 alt="monkey" />
 							<div class="card-body">
@@ -99,7 +98,7 @@
 							</div>
 						</div>
 						<div class="card me-sm-5">
-							<img src="{% static 'img/kermit-small.jpg' %}"
+							<img src="../static/img/kermit-small.jpg"
 								 class="card-img-top"
 								 alt="kermit" />
 							<div class="card-body">
@@ -112,7 +111,7 @@
 							</div>
 						</div>
 						<div class="card">
-							<img src="{% static 'img/rabbit-small.jpg' %}"
+							<img src="../static/img/rabbit-small.jpg"
 								 class="card-img-top"
 								 alt="rabbit" />
 							<div class="card-body">
@@ -158,9 +157,9 @@
 						</div>
 						<div class="carousel-inner">
 							<div class="carousel-item active">
-								 <img src="{% static 'img/monkey-big.jpg' %}"
+								 <img src="../static/img/monkey-big.jpg"
 									  class="d-block w-100"
-									  alt="a5 biale" />
+									  alt="monkey" />
 								<div class="carousel-caption d-none d-md-block">
 									<h5>zniżka na małpę</h5>
 									<p>
@@ -171,9 +170,9 @@
 								</div>
 							</div>
 							<div class="carousel-item">
-								 <img src="{% static 'img/kermit-big.jpg' %}"
+								 <img src="../static/img/kermit-big.jpg"
 									  class="d-block w-100"
-									  alt="a5 niebieskie" />
+									  alt="kermit" />
 								<div class="carousel-caption d-none d-md-block">
 									<h5>zniżka na kermita</h5>
 									<p>
@@ -184,7 +183,7 @@
 								</div>
 							</div>
 							<div class="carousel-item">
-								<img src="{% static 'img/rabbit-big.jpg' %}"
+								<img src="../static/img/rabbit-big.jpg"
 									 class="d-block w-100"
 									 alt="rabbit" />
 								<div class="carousel-caption d-none d-md-block">
@@ -227,7 +226,7 @@
 			<section id="search-engine" class="search-engine py-5">
 				<h2>Wyszukiwarka</h2>
 				<div class="container">
-					<div class="input-group mb-3">
+					<!-- <div class="input-group mb-3">
 						{% block search %}
 						<form action="{% url 'search_products' %}" method = 'get'>
 							{% csrf_token %}
@@ -239,7 +238,7 @@
 
 						{% endfor %}
 						{% endblock %}
-				</div>
+				</div> -->
                 <div class="empty">
                     <p>Miejsce do pojawiania się produktów po ich wyszukaniu</p>
                 </div>
@@ -375,12 +374,12 @@
 			<section id="login" class="login py-5">
 				<div class="container">
 					<h2>Zaloguj się lub zarejestuj!</h2>
-					<p>Masz konto? <a href="#">Zaloguj się!</a></p>
-					<p>Nie posiadasz jeszcze konta? <a href="#">Zarejestruj się!</a></p>
+					<p>Masz konto? <a href="../Users/templates/login.html">Zaloguj się!</a></p>
+					<p>Nie posiadasz jeszcze konta? <a href="../Users/templates/sign_up.html">Zarejestruj się!</a></p>
 				</div>
 			</section>
 		</main>
-		<footer class="footer-section">
+		<footer class="footer-section" id="contact">
 			<div class="container">
 				<div class="footer-cta pt-5 pb-5">
 					<div class="row">
