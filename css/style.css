@@ -286,9 +286,6 @@ ul {
 }
 
 @media (min-width: 320px) {
-  .container {
-    width: 100vw;
-  }
   .footer-section .container {
     margin: 0 auto;
   }
@@ -300,6 +297,12 @@ ul {
   }
   .footer-section .container .footer-content .container .footer-logo a {
     font-size: 30px;
+  }
+}
+
+@media (min-width: 414px) {
+  .container .navbar-toggler {
+    margin-right: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
