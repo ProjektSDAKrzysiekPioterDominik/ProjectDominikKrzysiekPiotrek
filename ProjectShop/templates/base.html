@@ -47,14 +47,13 @@
 				>
 					<i class="fa-solid fa-bars"></i>
 				</button>
-				{% if user.is_authenticated %}
-					<h4> Hi </h4>
-					<h5>{{ user.login }}</h5>
-				{% else %}
-					<h4>Niezalogowana DUPA</h4>
-				{% endif %}
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<ul class="navbar-nav ms-auto">
+						{% if user.is_authenticated %}
+						<li class =nav-item">
+							<a class = "nav-link activate" href ="">Twoje konto</a>
+						</li>
+						{% endif %}
 						<li class="nav-item">
 							<a class="nav-link active" href="#home">Home</a>
 						</li>
@@ -69,7 +68,7 @@
 						</li>
 						{% if user.is_authenticated %}
 						<li class="nav-item">
-							<a class="nav-link" href="#logout">Wyloguj</a>
+							<a class="nav-link" href="shop-user/logout/">Wyloguj</a>
 						</li>
 						{% else %}
 						<li class="nav-item">
@@ -386,9 +385,12 @@
 			</section>
 			<section id="login" class="login py-5">
 				<div class="container">
+					{% if user.is_authenticated %}
+					{% else %}
 					<h2>Zaloguj się lub zarejestuj!</h2>
 					<p>Masz konto? <a href="shop-user/login/">Zaloguj się!</a></p>
 					<p>Nie posiadasz jeszcze konta? <a href="shop-user/sign-up/">Zarejestruj się!</a></p>
+					{% endif %}
 				</div>
 			</section>
 		</main>
