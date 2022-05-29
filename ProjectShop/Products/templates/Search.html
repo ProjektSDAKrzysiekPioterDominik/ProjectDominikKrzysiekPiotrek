@@ -1,13 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block search %}
+{% block searchSearch %}
 <div>
-<form action="{% url 'search_products' %}" method = 'get'>
-    {% csrf_token %}
-    <input type="text" name = "q" placeholder="Search Product" />
-    <button id = 'button123' type="submit">Wyszukaj!</button>
-</form>
-
     <p id = "finded_obj"> Liczba wyszukanych obiektów  {{ products|length }}</p>
     {% for i in products %}
     {% if i.Is_listed %}

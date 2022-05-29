@@ -68,7 +68,7 @@
 						</li>
 						{% if user.is_authenticated %}
 						<li class="nav-item">
-							<a class="nav-link" href="shop-user/logout/">Wyloguj</a>
+							<a class="nav-link" href="http://127.0.0.1:8000/shop-user/logout/">Wyloguj</a>
 						</li>
 						{% else %}
 						<li class="nav-item">
@@ -239,16 +239,17 @@
 				<h2>Wyszukiwarka</h2>
 				<div class="container">
 					<div class="input-group mb-3">
-						{% block search %}
 						<form action="{% url 'search_products' %}" method = 'get'>
 							{% csrf_token %}
 							<input type="text" name = "q" placeholder="Search Product" />
 							<button type="submit">Wyszukaj!</button>
 						</form>
+						{% block searchSearch %}
 						{% for i in products %}
 							<h1>{{ i.Product_name }} </h1>
-
 						{% endfor %}
+						{% endblock %}
+						{% block search %}
 						{% endblock %}
 				</div>
                 <div class="empty">
@@ -388,7 +389,7 @@
 					{% if user.is_authenticated %}
 					{% else %}
 					<h2>Zaloguj się lub zarejestuj!</h2>
-					<p>Masz konto? <a href="shop-user/login/">Zaloguj się!</a></p>
+					<p>Masz konto? <a href="http://127.0.0.1:8000/shop-user/login/">Zaloguj się!</a></p>
 					<p>Nie posiadasz jeszcze konta? <a href="shop-user/sign-up/">Zarejestruj się!</a></p>
 					{% endif %}
 				</div>
