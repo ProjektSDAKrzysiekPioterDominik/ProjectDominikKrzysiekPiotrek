@@ -9,9 +9,9 @@
             <h1>{{ i.Product_name }} </h1>
             <h1>{{ i.Price }} </h1>
             {% if i.Image %}
-            <img src="{{ i.Image.url }}"  alt="Zdjecie Vibratora, ktore zajebali" />
+                <img src="{{ i.Image.url }}"  alt="brak" />
             {% else %}
-            <p>Zjdecie jakies zule ukradly</p>
+                <img src="{% static 'img/no_image.png' %}">
             {% endif %}
             <h1>{{ i.Describe }}</h1>
             <h1>{{ i.Date_added }}</h1>
@@ -19,3 +19,4 @@
     {% endfor %}
 </div>
 {% endblock %}
+

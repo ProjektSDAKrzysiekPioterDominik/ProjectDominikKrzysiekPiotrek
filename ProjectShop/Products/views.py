@@ -29,7 +29,7 @@ def index(request):
     return render(request, 'szablon.html', data)
 
 def all_products_for_category(request, category_id):
-    all_products_for_category = Products.objects.filter(Id_category=category_id)
+    all_products_for_category = Products.objects.filter(Id_category=category_id).order_by('-Date_added')
     return render(request, 'all-products-for-categories.html', {"products": all_products_for_category})
 
 def categorie(request):
@@ -38,9 +38,9 @@ def categorie(request):
     return render(request, 'categories.html', data)
 
 def product(request,id):
-    product_user = Products.objects.get(pk=id)
-    data = {'product_user': product_user}
-    return render(request, 'produkt.html', data)
+    product = Products.objects.get(pk=id)
+    data = {'product': product}
+    return render(request, 'product.html', data)
 
 def get_hello(request):
     categories = Categories.objects.all()
