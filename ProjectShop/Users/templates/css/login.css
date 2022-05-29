@@ -61,12 +61,12 @@ body {
 	cursor: pointer;
 	transition: box-shadow 0.5s;
 }
-.container .buttons .login a{
-    text-decoration: none;
+.container .buttons .login a {
+	text-decoration: none;
 	color: #333;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: bold;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: bold;
 }
 .container .buttons .login:hover {
 	box-shadow: inset 4px 4px 12px black;
@@ -84,9 +84,9 @@ body {
 .container .buttons .register a {
 	text-decoration: none;
 	color: #333;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: bold;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: bold;
 }
 
 .container .comeback a {
@@ -101,4 +101,127 @@ body {
 }
 .container .comeback a:hover {
 	color: aqua;
+}
+
+@media (min-width: 320px) {
+	.container {
+		width: 100%;
+		top: 0;
+		height: 100vh;
+	}
+	.container title {
+		padding-top: 15px;
+	}
+	.container form {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-57%);
+		width: 200px;
+	}
+	.container .buttons {
+		position: absolute;
+		width: 100%;
+		bottom: 145px;
+	}
+}
+
+@media (min-width: 375px) {
+	.container .buttons {
+		bottom: 200px;
+	}
+}
+
+@media (min-width: 414px) {
+	.container {
+		font-size: 26px;
+	}
+	.container form {
+		width: 70%;
+		bottom: 350px;
+	}
+	.container .buttons {
+		position: absolute;
+		bottom: 120px;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-content: center;
+		height: 218px;
+	}
+	.container .buttons .login {
+		width: 233px;
+		height: 75px;
+	}
+	.container .buttons .register {
+		width: 233px;
+		height: 75px;
+	}
+}
+
+@media (min-width: 768px) {
+	.container .title {
+		padding-top: 50px;
+	}
+	.container .email {
+		width: 70%;
+		height: 75px;
+		font-size: 20px;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-56%);
+	}
+	.container input {
+		font-size: 20px;
+	}
+	.container .password {
+		width: 70%;
+		height: 75px;
+		font-size: 20px;
+		position: absolute;
+		top: 273px;
+		left: 50%;
+		transform: translateX(-56%);
+	}
+	.container form {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.container .buttons {
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-content: flex-start;
+	}
+	.container .buttons .login,
+	.container .buttons .register {
+		width: 278px;
+		height: 114px;
+	}
+	.container .buttons .login a,
+	.container .buttons .register a {
+		font-size: 23px;
+	}
+}
+
+@media (min-width: 768px) {
+	.container {
+		height: 500px;
+		width: 400px;
+		top: 150px;
+		left: 50%;
+	}
+	.container .title {
+		padding-top: 23px;
+	}
+	.container .email {
+		width: 250px;
+		height: 54px;
+
+		position: absolute;
+		top: 28px;
+		left: 50%;
+
+		transform: translateX(-71%);
+	}
 }
