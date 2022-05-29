@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="pl">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>TeleKurwisie</title>
-		<link rel="shortcut icon" href="http://teletubis.pl/wp-content/uploads/2016/12/teletubisie-po.jpg">
+		<link rel="shortcut icon" href="http://teletubis.pl/wp-content/uploads/2016/12/teletubisie-po.jpg" />
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
 			rel="stylesheet"
@@ -14,28 +13,16 @@
 			crossorigin="anonymous"
 		/>
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-			rel="stylesheet"
-		/>
-		<link
-			rel="stylesheet"
-			type="text/css"
-			href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-		/>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-		<link rel="stylesheet" href="{% static 'css/style.css' %}" />
-		<script
-			src="https://kit.fontawesome.com/e72b2f82ff.js"
-			crossorigin="anonymous"
-		></script>
+		<link rel="stylesheet" href="../../css/style.css" />
+		<script src="https://kit.fontawesome.com/e72b2f82ff.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-lg position-fixed top-0 w-100 py-3">
 			<div class="container">
-				<a class="navbar-brand" href="#"
-					><i class="fa-brands fa-earlybirds"></i> Tele<span>Kurwisie</span></a
-				>
+				<a class="navbar-brand" href="#"><i class="fa-brands fa-earlybirds"></i> Tele<span>Kurwisie</span></a>
 				<button
 					class="navbar-toggler"
 					type="button"
@@ -86,54 +73,39 @@
 				<div class="container pb-4">
 					<div class="card-group d-lg-none">
 						<div class="card me-sm-5">
-							<img src="{% static 'img/monkey-small.jpg' %}"
-								 class="card-img-top"
-								 alt="monkey" />
+							<img src="../static/img/monkey-small.jpg" class="card-img-top" alt="monkey" />
 							<div class="card-body">
 								<h5 class="card-title">zniżka na małpę</h5>
 								<p class="card-text">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-									quod odio error repellat corrupti. Cumque modi quos reiciendis
-									alias possimus.
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quod odio error repellat corrupti.
+									Cumque modi quos reiciendis alias possimus.
 								</p>
 							</div>
 						</div>
 						<div class="card me-sm-5">
-							<img src="{% static 'img/kermit-small.jpg' %}"
-								 class="card-img-top"
-								 alt="kermit" />
+							<img src="../static/img/kermit-small.jpg" class="card-img-top" alt="kermit" />
 							<div class="card-body">
 								<h5 class="card-title">zniżka na kermita</h5>
 								<p class="card-text">
-									Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-									Expedita veniam rerum non similique nulla autem, quod officiis
-									id amet quos.
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita veniam rerum non similique nulla
+									autem, quod officiis id amet quos.
 								</p>
 							</div>
 						</div>
 						<div class="card">
-							<img src="{% static 'img/rabbit-small.jpg' %}"
-								 class="card-img-top"
-								 alt="rabbit" />
+							<img src="../static/img/rabbit-small.jpg" class="card-img-top" alt="rabbit" />
 							<div class="card-body">
-								<h5 class="card-title">
-									zniżka na znalezienie partnera/partnerki
-								</h5>
+								<h5 class="card-title">zniżka na znalezienie partnera/partnerki</h5>
 								<p class="card-text">
-									Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-									Expedita veniam rerum non similique nulla autem, quod officiis
-									id amet quos.
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita veniam rerum non similique nulla
+									autem, quod officiis id amet quos.
 								</p>
 							</div>
 						</div>
 					</div>
 
 					<!-- Portfolio na desktop -->
-					<div
-						id="carouselExampleCaptions"
-						class="carousel slide d-none d-lg-block"
-						data-bs-ride="false"
-					>
+					<div id="carouselExampleCaptions" class="carousel slide d-none d-lg-block" data-bs-ride="false">
 						<div class="carousel-indicators">
 							<button
 								type="button"
@@ -158,41 +130,32 @@
 						</div>
 						<div class="carousel-inner">
 							<div class="carousel-item active">
-								 <img src="{% static 'img/monkey-big.jpg' %}"
-									  class="d-block w-100"
-									  alt="a5 biale" />
+								<img src="../static/img/monkey-big.jpg" class="d-block w-100" alt="monkey" />
 								<div class="carousel-caption d-none d-md-block">
 									<h5>zniżka na małpę</h5>
 									<p>
-										Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
-										obcaecati corrupti in nesciunt! Nobis, facere eveniet omnis
-										numquam pariatur porro!
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam obcaecati corrupti in nesciunt! Nobis,
+										facere eveniet omnis numquam pariatur porro!
 									</p>
 								</div>
 							</div>
 							<div class="carousel-item">
-								 <img src="{% static 'img/kermit-big.jpg' %}"
-									  class="d-block w-100"
-									  alt="a5 niebieskie" />
+								<img src="../static/img/kermit-big.jpg" class="d-block w-100" alt="kermit" />
 								<div class="carousel-caption d-none d-md-block">
 									<h5>zniżka na kermita</h5>
 									<p>
-										Lorem ipsum dolor sit amet consectetur adipisicing elit.
-										Sunt harum exercitationem repellat animi, dolor quo nobis
-										sint vel et ea.
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt harum exercitationem repellat animi,
+										dolor quo nobis sint vel et ea.
 									</p>
 								</div>
 							</div>
 							<div class="carousel-item">
-								<img src="{% static 'img/rabbit-big.jpg' %}"
-									 class="d-block w-100"
-									 alt="rabbit" />
+								<img src="../static/img/rabbit-big.jpg" class="d-block w-100" alt="rabbit" />
 								<div class="carousel-caption d-none d-md-block">
 									<h5>zniżka na znalezienie partnera/partnerki</h5>
 									<p>
-										Lorem ipsum dolor sit amet consectetur adipisicing elit.
-										Sunt harum exercitationem repellat animi, dolor quo nobis
-										sint vel et ea.
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt harum exercitationem repellat animi,
+										dolor quo nobis sint vel et ea.
 									</p>
 								</div>
 							</div>
@@ -203,10 +166,7 @@
 							data-bs-target="#carouselExampleCaptions"
 							data-bs-slide="prev"
 						>
-							<span
-								class="carousel-control-prev-icon"
-								aria-hidden="true"
-							></span>
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 							<span class="visually-hidden">Previous</span>
 						</button>
 						<button
@@ -215,10 +175,7 @@
 							data-bs-target="#carouselExampleCaptions"
 							data-bs-slide="next"
 						>
-							<span
-								class="carousel-control-next-icon"
-								aria-hidden="true"
-							></span>
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
 							<span class="visually-hidden">Next</span>
 						</button>
 					</div>
@@ -228,46 +185,100 @@
 				<h2>Wyszukiwarka</h2>
 				<div class="container">
 					<div class="input-group mb-3">
-
-						<form action="{% url 'search_products' %}" method = 'get'>
-							{% csrf_token %}
-							<input type="text" name = "q" placeholder="Search Product" />
+						<form action="{% url 'search_products' %}" method="get">
+							<input type="text" name="q" placeholder="Search Product" />
 							<button type="submit">Wyszukaj!</button>
 						</form>
-						{% block searchSearch %}
-						{% for i in products %}
-							<h1>{{ i.Product_name }} </h1>
-						{% endfor %}
-						{% endblock %}
-						{% block search %}
-						{% endblock %}
 
+						<!-- <h1>{{ i.Product_name }} </h1> -->
+					</div>
 				</div>
-                <div class="empty">
-                    <p>Miejsce do pojawiania się produktów po ich wyszukaniu</p>
-                </div>
-                </div>
 			</section>
 			<section id="categories" class="categories py-5">
 				<div class="container">
 					<h2>Wyszukaj produktów po kategoriach</h2>
 					<div class="group d-flex justify-content-between flex-wrap">
-						{% for i in products %}
-							<h1>{{ i.Product_name }} </h1>
-
-						{% endfor %}
-						{% for i in categories %}
-
-							<button
-								type="button"
-								class="btn btn-danger dropdown-toggle"
-
-							>
-							<p><a href="{% url 'all-for-category' i.id %}">  {{ i.Name }} </a></p>
-
+						<div class="btn-group">
+							<button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown">
+								Kategoria 1
 							</button>
-						{% endfor %}
-
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item">Podkategoria 1</a></li>
+								<li><a class="dropdown-item">Podkategoria 2</a></li>
+								<li><a class="dropdown-item">Podkategoria 3</a></li>
+								<li><a class="dropdown-item">Podkategoria 4</a></li>
+							</ul>
+						</div>
+						<div class="btn-group">
+							<button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+								Kategoria 2
+							</button>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item">Podkategoria 1</a></li>
+								<li><a class="dropdown-item">Podkategoria 2</a></li>
+								<li><a class="dropdown-item">Podkategoria 3</a></li>
+								<li><a class="dropdown-item">Podkategoria 4</a></li>
+							</ul>
+						</div>
+						<div class="btn-group">
+							<button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown">
+								Kategoria 3
+							</button>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item">Podkategoria 1</a></li>
+								<li><a class="dropdown-item">Podkategoria 2</a></li>
+								<li><a class="dropdown-item">Podkategoria 3</a></li>
+								<li><a class="dropdown-item">Podkategoria 4</a></li>
+							</ul>
+						</div>
+						<div class="btn-group">
+							<button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown">
+								Kategoria 4
+							</button>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item">Podkategoria 1</a></li>
+								<li><a class="dropdown-item">Podkategoria 2</a></li>
+								<li><a class="dropdown-item">Podkategoria 3</a></li>
+								<li><a class="dropdown-item">Podkategoria 4</a></li>
+							</ul>
+						</div>
+						<div class="btn-group">
+							<button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown">
+								Kategoria 5
+							</button>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item">Podkategoria 1</a></li>
+								<li><a class="dropdown-item">Podkategoria 2</a></li>
+								<li><a class="dropdown-item">Podkategoria 3</a></li>
+								<li><a class="dropdown-item">Podkategoria 4</a></li>
+							</ul>
+						</div>
+						<div class="btn-group">
+							<button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown">Kategoria 6</button>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item">Podkategoria 1</a></li>
+								<li><a class="dropdown-item">Podkategoria 2</a></li>
+								<li><a class="dropdown-item">Podkategoria 3</a></li>
+								<li><a class="dropdown-item">Podkategoria 4</a></li>
+							</ul>
+						</div>
+						<div class="btn-group">
+							<button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown">Kategoria 7</button>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item">Podkategoria 1</a></li>
+								<li><a class="dropdown-item">Podkategoria 2</a></li>
+								<li><a class="dropdown-item">Podkategoria 3</a></li>
+								<li><a class="dropdown-item">Podkategoria 4</a></li>
+							</ul>
+						</div>
+						<div class="btn-group">
+							<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown">Kategoria 8</button>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item">Podkategoria 1</a></li>
+								<li><a class="dropdown-item">Podkategoria 2</a></li>
+								<li><a class="dropdown-item">Podkategoria 3</a></li>
+								<li><a class="dropdown-item">Podkategoria 4</a></li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -275,12 +286,12 @@
 			<section id="login" class="login py-5">
 				<div class="container">
 					<h2>Zaloguj się lub zarejestuj!</h2>
-					<p>Masz konto? <a href="#">Zaloguj się!</a></p>
-					<p>Nie posiadasz jeszcze konta? <a href="#">Zarejestruj się!</a></p>
+					<p>Masz konto? <a href="../Users/templates/login.html">Zaloguj się!</a></p>
+					<p>Nie posiadasz jeszcze konta? <a href="../Users/templates/sign_up.html">Zarejestruj się!</a></p>
 				</div>
 			</section>
 		</main>
-		<footer class="footer-section">
+		<footer class="footer-section" id="contact">
 			<div class="container">
 				<div class="footer-cta pt-5 pb-5">
 					<div class="row">
@@ -319,9 +330,21 @@
 							<a href="#"><i class="fa-brands fa-earlybirds"></i> Tele<span>Kurwisie</span></a>
 						</div>
 						<div class="social-links d-flex justify-content-around">
-							<p>Instagram: <a href="#"><i class="fa-brands fa-instagram instagram-bg"></i></a></p><br>
-							<p>Facebook: <a href="#"><i class="fa-brands fa-facebook-f facebook-bg"></i></a></p><br>
-							<p>Linkedin: <a href="#"><i class="fa-brands fa-linkedin-in linkedin-bg"></i></a></p>
+							<p>
+								Instagram:
+								<a href="https://www.instagram.com/teletubisiowy_swiat/"
+									><i class="fa-brands fa-instagram instagram-bg"></i
+								></a>
+							</p>
+							<br />
+							<p>
+								Facebook:
+								<a href="https://www.facebook.com/teletubbies/"><i class="fa-brands fa-facebook-f facebook-bg"></i></a>
+							</p>
+							<br />
+							<p>
+								Linkedin: <a href="#"><i class="fa-brands fa-linkedin-in linkedin-bg"></i></a>
+							</p>
 						</div>
 					</div>
 				</div>
@@ -338,20 +361,11 @@
 				startEvent: 'DOMContentLoaded',
 				offset: 200,
 				once: true,
-			});
+			})
 		</script>
-		<script
-			type="text/javascript"
-			src="//code.jquery.com/jquery-1.11.0.min.js"
-		></script>
-		<script
-			type="text/javascript"
-			src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
-		></script>
-		<script
-			type="text/javascript"
-			src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-		></script>
+		<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 		<script src="./js/slicksettings.js"></script>
 		<script src="./html,csss/js/script.js"></script>
 	</body>

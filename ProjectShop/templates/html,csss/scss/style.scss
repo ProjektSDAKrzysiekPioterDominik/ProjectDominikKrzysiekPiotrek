@@ -88,28 +88,6 @@ header {
 }
 
 .search-engine {
-	.container {
-		.input-group {
-			width: 400px;
-			margin: 0 auto;
-			input {
-				width: 290px;
-				border-radius: 10px;
-				padding: 5px;
-			}
-			form {
-				button {
-					border-radius: 15px;
-					font-size: 13px;
-					padding: 9px;width: 104px;
-				}
-				button:hover{
-					box-shadow: inset 4px 4px 12px black;
-					font-weight: bold;
-				}
-			}
-		}
-	}
 	h2 {
 		text-align: center;
 		text-transform: uppercase;
@@ -132,9 +110,6 @@ header {
 		.group {
 			.btn-group {
 				margin: 10px 5px;
-				.dropdown-toggle::after {
-					display: none;
-				}
 			}
 		}
 	}
@@ -167,7 +142,7 @@ ul {
 .footer-section {
 	background: #151414;
 	position: relative;
-
+	
 	.container {
 		.footer-cta {
 			border-bottom: 1px solid #373636;
@@ -176,7 +151,7 @@ ul {
 				color: deepskyblue;
 				font-size: 30px;
 				margin-top: 8px;
-				i {
+				i{
 					display: grid;
 					margin-bottom: 15px;
 				}
@@ -215,9 +190,9 @@ ul {
 					color: deepskyblue;
 				}
 			}
-			.social-links {
-				p {
-					color: #fff;
+			.social-links{
+				p{
+					color:#fff
 				}
 				a {
 					color: #fff;
@@ -230,14 +205,16 @@ ul {
 					text-align: center;
 					line-height: 38px;
 					border-radius: 50%;
-					transition: 0.5s;
+					transition: .5s;
 					margin-left: 20px;
+					
 				}
-				i:hover {
+				i:hover{
 					transform: rotateX(360deg);
 				}
 				.facebook-bg {
 					background: #3b5998;
+					
 				}
 				.linkedin-bg {
 					background: #0077b5;
@@ -264,37 +241,31 @@ ul {
 	}
 }
 
-@media (min-width: 320px) {
-	.footer-section {
-		.container {
+@media (min-width:320px){
+	.footer-section{
+		.container{
 			margin: 0 auto;
-			.row {
-				.single-cta {
-					i {
+			.row{
+				.single-cta{
+					i{
 						padding: 0 30px;
 					}
-					.cta-text {
+					.cta-text{
 						padding: 0 30px;
 					}
 				}
 			}
-			.footer-content {
-				.container {
-					.footer-logo {
-						a {
+			.footer-content{
+				.container{
+					.footer-logo{
+						a{
 							font-size: 30px;
 						}
+						
 					}
 				}
 			}
 		}
+		
 	}
-}
-
-@media (min-width:414px){
-    .container{
-        .navbar-toggler{
-			margin-right: 20px;
-		}
-    }
 }

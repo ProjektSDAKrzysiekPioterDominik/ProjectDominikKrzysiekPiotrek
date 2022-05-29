@@ -97,6 +97,30 @@ header .hero-text p {
   color: #333;
 }
 
+.search-engine .container .input-group {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.search-engine .container .input-group input {
+  width: 290px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.search-engine .container .input-group form button {
+  border-radius: 15px;
+  font-size: 13px;
+  padding: 9px;
+  width: 104px;
+}
+
+.search-engine .container .input-group form button:hover {
+  -webkit-box-shadow: inset 4px 4px 12px black;
+          box-shadow: inset 4px 4px 12px black;
+  font-weight: bold;
+}
+
 .search-engine h2 {
   text-align: center;
   text-transform: uppercase;
@@ -117,6 +141,10 @@ header .hero-text p {
 
 .categories .container .group .btn-group {
   margin: 10px 5px;
+}
+
+.categories .container .group .btn-group .dropdown-toggle::after {
+  display: none;
 }
 
 .login .container {
@@ -227,8 +255,8 @@ ul {
   text-align: center;
   line-height: 38px;
   border-radius: 50%;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   margin-left: 20px;
 }
 
@@ -269,6 +297,12 @@ ul {
   }
   .footer-section .container .footer-content .container .footer-logo a {
     font-size: 30px;
+  }
+}
+
+@media (min-width: 414px) {
+  .container .navbar-toggler {
+    margin-right: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
