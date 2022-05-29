@@ -11,11 +11,10 @@ class Client(models.Model):
     Phone = models.TextField(max_length = 20)
     Birth_date = models.DateField()
     City = models.TextField(max_length = 20)
-    
+
     class Meta:
         verbose_name = "Client"
         verbose_name_plural = "Clients"
-
 
 class Categories(models.Model):
     Name = models.CharField(max_length = 100)
@@ -27,11 +26,21 @@ class Categories(models.Model):
         verbose_name = "Category"
         verbose_name_plural = "Categories"
 
-        
-class Products(models.Model):
-    Id_category = models.ForeignKey(Categories,on_delete=models.CASCADE,null= True)
+class Producer(models.Model):
+    def __str__(self):
+        return self.name
 
+    name = models.CharField(max_length=60)
+    description = models.TextField(blank=True)
+
+    class Meta:
+        verbose_name = "Producer"
+        verbose_name_plural = "Producers"
+
+class Products(models.Model):
+    Id_category = models.ForeignKey(Categories, on_delete=models.CASCADE, null=True)
     Product_name = models.CharField(max_length=100)
+    Producer = models.ForeignKey(Producer, on_delete=models.CASCADE,null=True, blank=True)
     Price = models.DecimalField(default=0, validators=[MinValueValidator(0.01)], max_digits=12, decimal_places=2)
     Image = models.ImageField(blank=True)
     Describe = models.TextField(max_length=500)
@@ -41,7 +50,7 @@ class Products(models.Model):
 
 
     def __str__(self):
-        return f"{self.Product_name}"
+        return f"{self.Product_name} - {self.Price} PLN - {self.Is_listed} - {self.Image}"
 
     class Meta:
         verbose_name = "Product"
