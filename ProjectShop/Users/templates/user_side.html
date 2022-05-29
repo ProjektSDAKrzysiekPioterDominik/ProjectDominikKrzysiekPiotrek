@@ -1,0 +1,10 @@
+
+<a href="http://127.0.0.1:8000/">Powrót na stronę główną</a>
+<a href="http://127.0.0.1:8000/shop-user/logout/">Wyloguj</a>
+<a href="#">Twoje Dane</a>
+<a href="#">Historia Tranzakcji</a>
+<a href="http://127.0.0.1:8000/products/product-create/">Stworz Produkt</a>
+
+{% for i in basket %}
+    <p>{{ i }}</p>
+{% endfor %}

@@ -11,7 +11,6 @@ class ProductForm(ModelForm):
             "Price",
             "Image",
             "Describe",
-            "Date_added",
             "Is_listed",
         ]
 

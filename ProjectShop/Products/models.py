@@ -1,8 +1,10 @@
+from django.contrib.auth.models import User
 from django.db import models
 from django.core.validators import MinValueValidator
 
 # Create your models here.
 class Client(models.Model):
+    user = models.OneToOneField(User, null = True, on_delete=models.CASCADE)
     Login = models.TextField(max_length = 20)
     Name = models.TextField(max_length = 20)
     Surname = models.TextField(max_length = 20)
@@ -44,7 +46,7 @@ class Products(models.Model):
     Price = models.DecimalField(default=0, validators=[MinValueValidator(0.01)], max_digits=12, decimal_places=2)
     Image = models.ImageField(blank=True)
     Describe = models.TextField(max_length=500)
-    Date_added = models.DateField(blank = True, null = True)
+    Date_added = models.DateTimeField(blank = True, null = True, auto_now_add=True)
     Is_listed = models.BooleanField()
     Id_client = models.ForeignKey(Client, on_delete=models.CASCADE, null=True, blank=True)
 

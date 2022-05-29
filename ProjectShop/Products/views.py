@@ -45,8 +45,7 @@ def product(request,id):
 def get_hello(request):
     categories = Categories.objects.all()
     data = {'categories': categories}
-    return render(request, 'base.html', data)
-
+    return render(request, 'index.html', data)
 
 class ProductSearchView(ListView):
     model = Products
