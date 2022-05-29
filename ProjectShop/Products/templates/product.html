@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% if product_user %}
+        <h1> {{ product_user.Product_name }} </h1>
+        <p> {{ product_user.Producer }} </p>
+        <p> {{ product_user.Describe }} </p>
+        <p> {{ product_user.Price }} </p>
+
+    {% else %}
+        <p>Nie ma produktu o takim id.</p>
+    {% endif %}
+
+
+
+</body>
+</html>

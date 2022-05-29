@@ -5,7 +5,7 @@ from django.views.generic import CreateView, ListView
 from django.urls import reverse_lazy
 from Products.forms import ProductForm  #type: ignore
 from django.http import HttpResponse
-from .models import Products
+from .models import Products,Categories,Producer
 
 
 class ProductCreateView(CreateView):
@@ -15,12 +15,38 @@ class ProductCreateView(CreateView):
 
 
 def index(request):
-    zapytanie = Products.objects.all()
-    return HttpResponse(zapytanie)
+    all_products = Products.objects.all()
+    first = Products.objects.get(pk=1)
+    catego = Products.objects.filter(Id_category=2)
+    producer = Products.objects.filter(Producer=8)
+    catego_name = Categories.objects.get(id=2)
+    categories = Categories.objects.all()
+    null = Products.objects.filter(Id_category__isnull=False)
+    have = Products.objects.filter(Describe__icontains='lekko')
+    #return HttpResponse(all_products)
+
+    data = {'all_products': all_products}
+    return render(request, 'szablon.html', data)
+
+def all_products_for_category(request, category_id):
+    all_products_for_category = Products.objects.filter(Id_category=category_id)
+    return render(request, 'all-products-for-categories.html', {"products": all_products_for_category})
+
+def categorie(request):
+    categories = Categories.objects.all()
+    data = {'categories': categories}
+    return render(request, 'categories.html', data)
+
+def product(request,id):
+    product_user = Products.objects.get(pk=id)
+    data = {'product_user': product_user}
+    return render(request, 'produkt.html', data)
 
 def get_hello(request):
-    data = {}
+    categories = Categories.objects.all()
+    data = {'categories': categories}
     return render(request, 'base.html', data)
+
 
 class ProductSearchView(ListView):
     model = Products
