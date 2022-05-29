@@ -20,7 +20,7 @@ def index(request):
 
 def get_hello(request):
     data = {}
-    return render(request, 'base.html', data)
+    return render(request, 'index.html', data)
 
 class ProductSearchView(ListView):
     model = Products

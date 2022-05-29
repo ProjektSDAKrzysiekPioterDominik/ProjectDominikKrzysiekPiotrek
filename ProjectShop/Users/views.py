@@ -5,6 +5,7 @@ from django.urls import reverse_lazy
 from Users.forms import SignUpForm #type: ignore
 from django.contrib import auth
 from django.shortcuts import render
+from Products.models import Basket, Client #type: ignore
 
 
 from django.contrib.auth.decorators import login_required
