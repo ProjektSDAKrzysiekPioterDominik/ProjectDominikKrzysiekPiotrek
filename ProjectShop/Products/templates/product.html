@@ -1,15 +1,21 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-    {% if product_user %}
-        <h1> {{ product_user.Product_name }} </h1>
-        <p> {{ product_user.Producer }} </p>
-        <p> {{ product_user.Describe }} </p>
-        <p> {{ product_user.Price }} </p>
+    {% if product %}
+        <h1> {{ product.Product_name }} </h1>
+        <p> {{ product.Producer }} </p>
+        <p> {{ product.Describe }} </p>
+        <p> {{ product.Price }} </p>
+        {% if product.Image %}
+            <img src="{{ product.Image.url }}"  alt="brak" />
+        {% else %}
+            <img src="{% static 'img/no_image.png' %}">
+        {% endif %}
 
     {% else %}
         <p>Nie ma produktu o takim id.</p>

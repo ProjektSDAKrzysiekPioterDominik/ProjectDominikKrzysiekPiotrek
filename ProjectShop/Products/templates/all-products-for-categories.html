@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
 <title>Hey</title>
@@ -6,6 +7,11 @@
 <body>
     {% for product in products %}
     {{ product.Product_name }} {{ product.Price }}
+    {% if product.Image %}
+            <img src="{{ product.Image.url }}"  alt="Zdjecie Vibratora, ktore zajebali" />
+    {% else %}
+        <img src="{% static 'img/no_image.png' %}">
+    {% endif %}
     {% endfor %}
 </body>
 </html>
