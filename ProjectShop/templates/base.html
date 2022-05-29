@@ -47,6 +47,12 @@
 				>
 					<i class="fa-solid fa-bars"></i>
 				</button>
+				{% if user.is_authenticated %}
+					<h4> Hi </h4>
+					<h1>DUPA</h1>
+				{% else %}
+					<h1>Niezalogowana DUPA</h1>
+				{% endif %}
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<ul class="navbar-nav ms-auto">
 						<li class="nav-item">
@@ -452,7 +458,7 @@
 			type="text/javascript"
 			src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
 		></script>
-		<script src="./js/slicksettings.js"></script>
+<!--		<script src="./js/slicksettings.js"></script>-->
 		<script src="{% static '/js/script.js' %}"></script>
 	</body>
 </html>
