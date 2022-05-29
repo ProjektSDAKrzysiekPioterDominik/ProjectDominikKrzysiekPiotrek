@@ -217,11 +217,43 @@ body {
 	.container .email {
 		width: 250px;
 		height: 54px;
-
 		position: absolute;
 		top: 28px;
 		left: 50%;
-
 		transform: translateX(-71%);
 	}
+	.container .password {
+		width: 250px;
+		height: 54px;
+		position: absolute;
+		top: 100px;
+		left: 50%;
+		transform: translateX(-71%);
+	}
+	.container .buttons .login a,
+	.container .buttons .register a {
+		font-size: 15px;
+	}
+	.container .buttons {
+		position: absolute;
+		bottom: 138px;
+        height: auto;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-content: center;
+		justify-content: space-around;
+	}
+	.container .buttons .login,
+	.container .buttons .register {
+		width: 184px;
+		height: 63px;
+	}
+    .container .comeback a{
+        font-size: 15px;
+    }
+    .container form {
+        top: 46%;
+        font-size: 17px;
+    }
 }
