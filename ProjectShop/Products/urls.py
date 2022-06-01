@@ -3,7 +3,7 @@ from django.urls import path
 
 from Products.views import ProductCreateView #type: ignore
 
-from Products.views import index, ProductSearchView, all_products_for_category,product
+from Products.views import index, ProductSearchView, all_products_for_category,product #type: ignore
 
 
 

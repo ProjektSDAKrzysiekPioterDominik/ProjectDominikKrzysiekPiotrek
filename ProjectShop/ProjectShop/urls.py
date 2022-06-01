@@ -17,7 +17,7 @@ urlpatterns = [
     #path('categorie/<id>/', categorie, name='categorie'),
     path('categorie/', categorie, name='categorie'),
     path('product/<id>/', product, name='product'),
-
+    path('shop-user/', include('Users.urls')),
     # path('product-create', ProductCreateView.as_view(), name="product_create"),
 ]
 
