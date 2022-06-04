@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.views import View
 
 # Create your views here.
 from django.views.generic import CreateView, ListView
@@ -58,3 +59,13 @@ class ProductSearchView(ListView):
             return Products.objects.filter(Product_name__icontains=query).order_by('-Date_added')
         else:
             return Products.objects.all()
+
+
+class Index(View):
+    def post(self, request):
+        product = request.POST.get('product')
+        print(product)
+        return redirect('home')
+    # def get(self, request):
+    #     get_products = None
+    #     get_category = Categories.get
