@@ -14,7 +14,15 @@
             {% endif %}
             <h1>{{ i.Describe }}</h1>
             <h1>{{ i.Date_added }}</h1>
+
+            <form action="/" name="product" method="POST">
+                {% csrf_token %}
+                <input hidden type="text" value='{{ i.id }}'>
+            <input type="submit" value='Dodaj do koszyka'>
+            </form>
+            <hr size="20" color="red">
     {% endif %}
     {% endfor %}
 </div>
 {% endblock %}
+

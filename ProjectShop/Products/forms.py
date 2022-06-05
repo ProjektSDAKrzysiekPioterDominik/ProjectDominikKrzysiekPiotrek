@@ -20,3 +20,16 @@ class ProductForm(ModelForm):
         #     result = super().clean()
         #     logger.info(f"BookForm - clean run - result is {result}")
         #     return result
+
+# class Basket(ModelForm):
+#     class Meta:
+#         model = Basket
+#
+#         fields = [
+#             "Id_category",
+#             "Product_name",
+#             "Price",
+#             "Image",
+#             "Describe",
+#             "Is_listed",
+#         ]

@@ -92,4 +92,5 @@ class History_transactions(models.Model):
         verbose_name = "History_transaction"
         verbose_name_plural = "History_transactions"
 
-
+#
+# <!--							{% url 'user_side' Client.user.id %}-->
