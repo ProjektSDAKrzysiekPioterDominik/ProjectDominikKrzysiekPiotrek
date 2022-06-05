@@ -23,6 +23,6 @@ def logoutview(request):
     return redirect('/')
 
 @login_required(login_url='login')
-def user_side(request):
+def user_side(request, id):
     data = {}
     return render(request, 'user_side.html', data)
