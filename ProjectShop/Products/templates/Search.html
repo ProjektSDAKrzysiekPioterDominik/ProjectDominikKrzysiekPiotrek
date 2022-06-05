@@ -15,10 +15,14 @@
             <h1>{{ i.Describe }}</h1>
             <h1>{{ i.Date_added }}</h1>
 
-            <form action="/" name="product" method="POST">
+            <form action="{% url 'add_to_basket' %}" name="product" method="POST">
                 {% csrf_token %}
-                <input hidden type="text" value='{{ i.id }}'>
-            <input type="submit" value='Dodaj do koszyka'>
+                <input hidden name="Id_product" type="text" value='{{ i.id }}'>
+                <input hidden name="Id_client" type="text" value='{{ user.id }}'>
+                <input hidden name="Price" type="number" value='{{ i.Price }}'>
+                <label for="Quantity">Podaj ilość:</label>
+                <input name="Quantity" type="number" id="Quantity" value="1">
+                <input type="submit" value='Dodaj do koszyka'>
             </form>
             <hr size="20" color="red">
     {% endif %}

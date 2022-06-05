@@ -3,9 +3,9 @@ from django.views import View
 from .models import *
 
 # Create your views here.
-from django.views.generic import CreateView, ListView
+from django.views.generic import CreateView, ListView, FormView
 from django.urls import reverse_lazy
-from Products.forms import ProductForm  #type: ignore
+from Products.forms import ProductForm, BasketForm  # type: ignore
 from django.http import HttpResponse
 from .models import Products,Categories,Producer
 
@@ -61,4 +61,24 @@ class ProductSearchView(ListView):
         else:
             return Products.objects.all()
 
+
+class NewBasketItemView(FormView):
+    form_class = BasketForm
+    template_name = "Search.html"
+    success_url = reverse_lazy('search_products')
+
+    def post(self, request, *args, **kwargs):
+        product_id = request.POST.get('Id_product')
+        user_id = request.POST.get('Id_client')
+        price = request.POST.get('Price')
+        quantity = request.POST.get('Quantity')
+
+        if product_id and user_id and price and quantity:
+            form = BasketForm(request.POST)
+            client = Client.objects.get(user=user_id)
+            form.Id_client = client.id
+            if form.is_valid():
+                form.save()
+
+        return super().post(request, *args, **kwargs)
 

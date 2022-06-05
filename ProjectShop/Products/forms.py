@@ -1,5 +1,5 @@
 from django.forms import ModelForm, CharField
-from Products.models import Products #type:ignore
+from Products.models import Products, Basket  # type:ignore
 
 class ProductForm(ModelForm):
     class Meta:
@@ -21,15 +21,8 @@ class ProductForm(ModelForm):
         #     logger.info(f"BookForm - clean run - result is {result}")
         #     return result
 
-# class Basket(ModelForm):
-#     class Meta:
-#         model = Basket
-#
-#         fields = [
-#             "Id_category",
-#             "Product_name",
-#             "Price",
-#             "Image",
-#             "Describe",
-#             "Is_listed",
-#         ]
+
+class BasketForm(ModelForm):
+    class Meta:
+        model = Basket
+        fields = '__all__'
