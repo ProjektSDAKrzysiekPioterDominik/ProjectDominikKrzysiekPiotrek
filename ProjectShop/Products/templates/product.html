@@ -41,7 +41,7 @@
 					<ul class="navbar-nav ms-auto">
 						{% if user.is_authenticated %}
 						<li class =nav-item">
-							<a class = "nav-link activate" href ="http://127.0.0.1:8000/shop-user/user-side/">Twoje konto</a>
+							<a class = "nav-link activate" href ="{% url 'user_side' user.id %}">Twoje konto</a>
 						</li>
 						{% endif %}
 						<li class="nav-item">
@@ -106,20 +106,22 @@
                     <p>  </p>
                     <p>  </p>
 
-                    <div>
+
                         <p> </p>
                         <p> </p>
                         <p> </p>
 
 
-                    <section id="search-engine" class="search-engine py-5">
+
+						<div class="container" style="margin-top: 100px;">
 				{% if product %}
+							<div class="card" style="margin: auto; max-width: 800px;">
                         <p>Nazwa: {{ product.Product_name }} </p>
                         <p>Producent: {{ product.Producer }} </p>
                         <p>Opis: {{ product.Describe }} </p>
                         <p>Cena: {{ product.Price }} </p>
                         {% if product.Image %}
-                            <img src="{{ product.Image.url }}"  alt="brak" class="position"  />
+                            <img src="{{ product.Image.url }}"  alt="brak" class="position" style="width:50%"   />
                         {% else %}
                             <img src="{% static 'img/no_image.png' %} " class="center">
                         {% endif %}
@@ -127,6 +129,16 @@
                     {% else %}
                         <p>Nie ma produktu o takim id.</p>
                     {% endif %}
+								<form action="{% url 'add_to_basket2' %}" name="product" method="POST">
+                {% csrf_token %}
+                <input hidden name="Id_product" type="text" value='{{ product.id }}'>
+                <input hidden name="Id_client" type="text" value='{{ user.id }}'>
+                <input hidden name="Price" type="number" value='{{ product.Price }}'>
+                <label for="Quantity">Podaj ilość:</label>
+                <input name="Quantity" type="number" id="Quantity" value="1">
+                <input type="submit" value='Dodaj do koszyka'>
+            </form>
+						</div>
 				</div>
 
 

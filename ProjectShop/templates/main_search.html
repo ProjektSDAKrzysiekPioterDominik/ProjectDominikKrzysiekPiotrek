@@ -41,7 +41,7 @@
 					<ul class="navbar-nav ms-auto">
 						{% if user.is_authenticated %}
 						<li class =nav-item">
-							<a class = "nav-link activate" href ="http://127.0.0.1:8000/shop-user/user-side/">Twoje konto</a>
+							<a class = "nav-link activate" href="{% url 'user_side' user.id %}" >Twoje konto</a>
 						</li>
 						{% endif %}
 						<li class="nav-item">
