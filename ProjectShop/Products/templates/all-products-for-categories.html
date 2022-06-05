@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Produkty</title>
     <meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -106,19 +106,26 @@
                     <p>  </p>
                     <p>  </p>
 
-                    <div>
-                        <p> </p>
-                        <p> </p>
-                        <p> </p>
+						<div>
+                        <br>
+                        <br>
 
 				{% for product in products %}
-                {{ product.Product_name }} {{ product.Price }} {% if product.Image %}
-                <img src="{{ product.Image.url }}"  alt="Zdjecia brak" />
+
+						<div class="card" style="width:50%" >
+						<H1> Nazwa: {{ product.Product_name }}</H1>
+						<p> Cena: {{ product.Price }} zł </p>
+						<p> {% if product.Image %}
+							<img src="{{ product.Image.url }}"  alt="Zdjecia brak" style="width:50%"  /> </p>
                 {% else %}
                     <img src="{% static 'img/no_image.png' %}">
                 {% endif %}
-							<a href="{% url 'product' product.id %}">  {{ product.Product_name }} </a>
-                {% endfor %}
+							<a href="{% url 'product' product.id %}"> <button type="submit" style="background-color:#FF5733; ">Zobacz ofertę</button>  </a>
+                </div>
+							{% endfor %}
+							<br>
+							<span></span>
+
 				</div>
 
 
