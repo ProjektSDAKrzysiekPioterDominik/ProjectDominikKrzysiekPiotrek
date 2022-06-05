@@ -1,7 +1,7 @@
 
 
-<h1>Hello {{ user.username }}</h1>
-<h1> {{ Client_rambo }} </h1>
+<h1> Siema {{ Client_rambo.Name }} {{ Client_rambo.Surname }}</h1>
+
 
 <a href="http://127.0.0.1:8000/">Powrót na stronę główną</a>
 <a href="http://127.0.0.1:8000/shop-user/logout/">Wyloguj</a>
@@ -9,6 +9,9 @@
 <a href="#">Historia Tranzakcji</a>
 <a href="http://127.0.0.1:8000/products/product-create/">Stworz Produkt</a>
 
-{% for i in basket %}
-    <p>{{ i }}</p>
+{% for i in Basket_rambo %}
+    <p> {{ i.Id_product.Product_name }}</p>
+    <p>Cena: {{ i.Price }}</p>
+    <p>Ilość: {{ i.Quantity }}</p>
+    <hr>
 {% endfor %}

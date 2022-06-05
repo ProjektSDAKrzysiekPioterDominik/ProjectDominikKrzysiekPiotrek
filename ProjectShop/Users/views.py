@@ -24,6 +24,8 @@ def logoutview(request):
 
 @login_required(login_url='login')
 def user_side(request, id):
-    Client_rambo = Client.user.get(pk = 1)
-    data = {"Client_rambo": Client_rambo}
+    Client_rambo = Client.objects.get(user = id)
+    Client_rambo_id = Client_rambo.id
+    Basket_rambo = Basket.objects.filter(Id_client = Client_rambo_id)
+    data = {"Client_rambo": Client_rambo, 'Basket_rambo': Basket_rambo}
     return render(request, 'user_side.html', data)
