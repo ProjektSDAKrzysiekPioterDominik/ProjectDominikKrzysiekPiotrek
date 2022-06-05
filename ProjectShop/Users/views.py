@@ -5,7 +5,7 @@ from django.urls import reverse_lazy
 from Users.forms import SignUpForm #type: ignore
 from django.contrib import auth
 from django.shortcuts import render
-from Products.models import Basket, Client #type: ignore
+from Products.models import Basket, Client, History_transactions #type: ignore
 
 
 from django.contrib.auth.decorators import login_required
@@ -29,3 +29,9 @@ def user_side(request, id):
     Basket_rambo = Basket.objects.filter(Id_client = Client_rambo_id)
     data = {"Client_rambo": Client_rambo, 'Basket_rambo': Basket_rambo}
     return render(request, 'user_side.html', data)
+
+@login_required(login_url='login')
+def Transaction_history(request, id):
+    Transaction_history_Rambo = History_transactions.objects.filter(Id_client = id)
+    data = {'Transaction_history_Rambo': Transaction_history_Rambo}
+    return render(request, 'Transaction_history.html', data)
