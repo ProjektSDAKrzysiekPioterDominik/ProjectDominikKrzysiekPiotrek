@@ -9,34 +9,39 @@
 		<link rel="stylesheet" href="{% static 'css/register.css' %}" />
 		<link rel="shortcut icon" href="http://teletubis.pl/wp-content/uploads/2016/12/teletubisie-po.jpg" />
 		<script src="https://kit.fontawesome.com/e72b2f82ff.js" crossorigin="anonymous"></script>
+
 	</head>
 <h2>Sign up</h2>
-<!--<form method="post">-->
-<!--    {% csrf_token %}-->
-<!--&lt;!&ndash;    {{ form.as_p }}&ndash;&gt;-->
-<!--&lt;!&ndash;    <button type="submit">Sign up</button>&ndash;&gt;-->
-<!--&lt;!&ndash;    {% for field in form %}&ndash;&gt;-->
-<!--&lt;!&ndash;        {{ field.label }}&ndash;&gt;-->
-<!--&lt;!&ndash;        {{ field }}&ndash;&gt;-->
-<!--&lt;!&ndash;    {% endfor %}&ndash;&gt;-->
-
-
-<!--    {{form.username.label}}-->
-<!--    {{form.username}}-->
-
-<!--    {{form.email.label}}-->
-<!--    {{form.email}}-->
-
-<!--    {{form.password1.label}}-->
-<!--    {{form.password1}}-->
-
-<!--    {{form.password2.label}}-->
-<!--    {{form.password2}}-->
-
+<form method="post">
+    {% csrf_token %}
+<!--    {{ form.as_p }}-->
 <!--    <button type="submit">Sign up</button>-->
+<!--    {% for field in form %}-->
+<!--        {{ field.label }}-->
+<!--        {{ field }}-->
+<!--    {% endfor %}-->
+
+		<div class="name">
+			{{form.username.label}}
+			{{form.username}}
+		</div>
+
+		<div class="password">
+			{{form.password1.label}}
+			{{form.password1}}
+		</div>
+		<div class="password">
+			{{form.password2.label}}
+			{{form.password2}}
+		</div>
+		<button type="submit">Sign up</button>
+
+	<br>
+	<br>
+	<a href="{% url 'home' %}">Powrot na strone glowna </a>
 
 
-<!--</form>-->
+</form>
 
 <!--	<body>-->
 <!--		<div class="container">-->

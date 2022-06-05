@@ -1,0 +1,15 @@
+<h1> Twoja historia tranzakcji </h1>
+
+{% for i in Transaction_history_Rambo %}
+    <p>Data zakupu: {{ i.Date_of_buy }} </p>
+    <p>Cena: {{ i.Price }} </p>
+    <p>Status dostawy: {{ i.Status}} </p>
+    <p>Oczekiwany czas dostawyu: {{ i.Excepted_day_of_delivery}} </p>
+
+    <hr>
+
+{% endfor %}
+
+
+<a href = "{% url 'user_side' user.id %}">Powrot do twojego konta</a>
+<a href = "{% url 'home' %}">Powrót na stronę główną</a>
