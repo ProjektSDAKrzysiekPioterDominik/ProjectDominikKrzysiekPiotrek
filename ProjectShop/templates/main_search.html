@@ -102,23 +102,25 @@
 								aria-label="Slide 3"
 							></button>
 						</div>
-                    <p>  </p>
-                    <p>  </p>
-                    <p>  </p>
-
-                    <div>
-                        <p> </p>
-                        <p> </p>
-                        <p> </p>
-
-				{% for product in products %}
-                {{ product.Product_name }} {{ product.Price }} {% if product.Image %}
-                <img src="{{ product.Image.url }}"  alt="Zdjecia brak" />
-                {% else %}
-                    <img src="{% static 'img/no_image.png' %}">
-                {% endif %}
-							<a href="{% url 'product' product.id %}">  {{ product.Product_name }} </a>
-                {% endfor %}
+            <p> spacja</p>
+            <p> spacja</p>
+            <p> spacja</p>
+			<section id="search-engine" class="search-engine py-5">
+				<h2>Wyszukiwarka</h2>
+				<div class="container">
+					<div class="input-group mb-3">
+						<form action="{% url 'search_products' %}" method = 'get'>
+							{% csrf_token %}
+							<input type="text" name = "q" placeholder="Search Product" />
+							<button type="submit">Wyszukaj!</button>
+						</form>
+						{% block searchSearch %}
+						{% for i in products %}
+							<h1>{{ i.Product_name }} </h1>
+						{% endfor %}
+						{% endblock %}
+						{% block search %}
+						{% endblock %}
 				</div>
 
 
@@ -221,3 +223,4 @@
 		<script src="{% static '/js/script.js' %}"></script>
 	</body>
 </html>
+

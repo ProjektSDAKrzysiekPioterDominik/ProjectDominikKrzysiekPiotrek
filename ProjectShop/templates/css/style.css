@@ -493,6 +493,12 @@ aside .list ul li .mega-menu3 {
           justify-content: space-between;
 }
 
+.position{position: absolute;
+top:0;
+left:auto;
+transition:transform (-50%, -50%);
+}
+
 aside .list ul li .mega-menu3 ol p {
   font-weight: bold;
 }
