@@ -14,24 +14,45 @@
 	<body>
 		<div class="container">
 			<div class="title">
-				<h2>Panel Logowania</h2>
+				<h2>Zaloguj się</h2>
 			</div>
-			<div class="email">
-				<input type="text" placeholder=" 🖕🏻 Podaj swój email..." />
-			</div>
-			<div class="password">
-				<input type="password" placeholder=" 🖕🏻 Podaj swoje hasło..." />
-			</div>
-			<form>
-				<p>Zapamiętaj mnie <input type="checkbox" id="remember" /></p>
+			<form method="post">
+				{% csrf_token %}
+				{{ form.as_p }}
+				<button type="submit">Login</button>
 			</form>
-			<div class="buttons">
-				<button class="login"><a href="#">Zaloguj się!</a></button>
-				<button class="register"><a href="{% url 'sign_up' %}">Zarejestruj się!</a></button>
-			</div>
-			<div class="comeback">
-				<a href="{% url 'home' %}">Powrót na stronę główną</a>
-			</div>
+			<p>Nie masz konta?</p>
+			<a href="http://127.0.0.1:8000/shop-user/sign-up/">
+				<p>Zarejestuj się!</p>
+			</a>
+
+			<a href="http://127.0.0.1:8000/">
+				<p>Powrot na strone glowna</p>
+			</a>
+
+			<p>Nie pamiętasz hasła?</p>
+			<p>To masz problem, prace są w toku...</p>
 		</div>
+<!--		<div class="container">-->
+<!--			<div class="title">-->
+<!--				<h2>Panel Logowania</h2>-->
+<!--			</div>-->
+<!--			<div class="email">-->
+<!--				<input type="text" placeholder=" 🖕🏻 Podaj swój email..." />-->
+<!--			</div>-->
+<!--			<div class="password">-->
+<!--				<input type="password" placeholder=" 🖕🏻 Podaj swoje hasło..." />-->
+<!--			</div>-->
+<!--			<form>-->
+<!--				<p>Zapamiętaj mnie <input type="checkbox" id="remember" /></p>-->
+<!--			</form>-->
+<!--			<div class="buttons">-->
+<!--				<button class="login"><a href="{% url 'home' %}">Zaloguj się!</a></button>-->
+<!--				<button class="register"><a href="{% url 'sign_up' %}">Zarejestruj się!</a></button>-->
+<!--			</div>-->
+<!--			<div class="comeback">-->
+<!--				<a href="{% url 'home' %}">Powrót na stronę główną</a>-->
+<!--			</div>-->
+<!--		</div>-->
 	</body>
 </html>
