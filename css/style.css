@@ -81,6 +81,8 @@ header .hero-text {
 
 header .hero-text h1 {
   color: #ddd;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 header .hero-text h1 span {

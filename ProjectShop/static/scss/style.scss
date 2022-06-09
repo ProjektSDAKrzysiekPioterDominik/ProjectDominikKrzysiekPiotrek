@@ -1,3 +1,4 @@
+@import './colors';
 *,
 *::before,
 *::after {
@@ -6,13 +7,13 @@
 	padding: 0;
 }
 .shadow {
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: $shadow
 }
 
 body {
 	position: relative;
 	font-family: 'Montserrat', sans-serif;
-	background-color: #333;
+	background-color: $textColor;
 }
 nav {
 	text-transform: uppercase;
@@ -20,25 +21,25 @@ nav {
 	transition: background-color 0.6s;
 	.container {
 		.navbar-toggler {
-			color: #ddd;
+			color: $secondaryColor;
 		}
 		a {
 			font-weight: bold;
 			span {
-				color: deepskyblue;
+				color: $mainColor;
 			}
 		}
 		a:hover {
-			color: deepskyblue;
+			color: $mainColor;
 		}
 		a,
 		.nav-item {
-			color: #ddd;
+			color: $secondaryColor;
 		}
 		.collapse {
 			.navbar-nav {
 				.active {
-					color: deepskyblue;
+					color: $mainColor;
 				}
 			}
 		}
@@ -60,7 +61,7 @@ header {
 		height: 100%;
 		top: 0;
 		z-index: -10;
-		background-color: rgba(0, 0, 0, 0.8);
+		background-color: $shadow
 	}
 	.hero-text {
 		position: absolute;
@@ -71,20 +72,22 @@ header {
 		text-align: center;
 		text-transform: uppercase;
 		h1 {
-			color: #ddd;
+			color: $secondaryColor;
+			font-weight: bold;
+			letter-spacing: 2px;
 			span {
-				color: deepskyblue;
+				color: $mainColor;
 			}
 		}
 		p {
-			color: #ddd;
+			color: $secondaryColor;
 		}
 	}
 }
 .discounts {
 	text-align: center;
 	text-transform: uppercase;
-	color: #333;
+	color: $textColor;
 }
 
 .search-engine {
@@ -113,11 +116,11 @@ header {
 	h2 {
 		text-align: center;
 		text-transform: uppercase;
-		color: #ddd;
+		color: $secondaryColor;
 	}
 	p {
 		text-align: center;
-		color: #ddd;
+		color: $secondaryColor;
 		font-size: 40px;
 	}
 }
@@ -125,7 +128,7 @@ header {
 .categories {
 	.container {
 		h2 {
-			color: #ddd;
+			color: $secondaryColor;
 			text-transform: uppercase;
 			text-align: center;
 		}
@@ -144,14 +147,14 @@ header {
 	.container {
 		text-align: center;
 		h2 {
-			color: #ddd;
+			color: $secondaryColor;
 		}
 		p {
-			color: #ddd;
+			color: $secondaryColor;
 			padding-top: 15px;
 		}
 		a {
-			color: deepskyblue;
+			color: $mainColor;
 			text-decoration: none;
 		}
 		a:hover {
@@ -173,7 +176,7 @@ ul {
 			border-bottom: 1px solid #373636;
 			text-align: center;
 			.single-cta {
-				color: deepskyblue;
+				color: $mainColor;
 				font-size: 30px;
 				margin-top: 8px;
 				i {
@@ -184,7 +187,7 @@ ul {
 					padding-left: 15px;
 					display: inline-block;
 					h4 {
-						color: #fff;
+						color: $secondaryTextColor;
 						font-size: 20px;
 						font-weight: bold;
 						margin-bottom: 2px;
@@ -212,15 +215,15 @@ ul {
 					font-size: 40px;
 				}
 				span {
-					color: deepskyblue;
+					color: $mainColor;
 				}
 			}
 			.social-links {
 				p {
-					color: #fff;
+					color: $secondaryTextColor;
 				}
 				a {
-					color: #fff;
+					color: $secondaryTextColor;
 					font-size: 16px;
 					margin-right: 15px;
 				}
@@ -246,7 +249,7 @@ ul {
 					display: inline-block;
 					text-align: center;
 					border-radius: 40px;
-					color: #fff;
+					color: $secondaryTextColor;
 					vertical-align: middle;
 					background: #d6249f;
 					background: radial-gradient(
