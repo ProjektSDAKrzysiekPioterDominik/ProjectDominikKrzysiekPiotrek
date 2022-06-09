@@ -48,7 +48,8 @@ header {
 		z-index: 0;
 		background-position: center;
 	}
-	.hero-shadow,.hero-text{
+	.hero-shadow,
+	.hero-text {
 		position: absolute;
 	}
 	.hero-shadow {
@@ -65,11 +66,11 @@ header {
 		z-index: 5;
 		text-align: center;
 		text-transform: uppercase;
-		h1, p{
+		h1,
+		p {
 			color: $secondaryColor;
 		}
 		h1 {
-			
 			font-weight: bold;
 			letter-spacing: 2px;
 			span {
@@ -271,8 +272,8 @@ ul {
 		.container {
 			.input-group {
 				width: auto;
-				form{
-					button{
+				form {
+					button {
 						display: block;
 						margin: 0 auto;
 						margin-top: 10px;
@@ -286,9 +287,7 @@ ul {
 			margin: 0 auto;
 			.row {
 				.single-cta {
-					i {
-						padding: 0 30px;
-					}
+					i,
 					.cta-text {
 						padding: 0 30px;
 					}
