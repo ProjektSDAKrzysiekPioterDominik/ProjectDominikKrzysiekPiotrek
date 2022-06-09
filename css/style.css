@@ -45,10 +45,6 @@ nav .container .nav-item {
   color: #ddd;
 }
 
-nav .container .collapse .navbar-nav .active {
-  color: deepskyblue;
-}
-
 header .hero-img {
   position: relative;
   height: 100vh;
