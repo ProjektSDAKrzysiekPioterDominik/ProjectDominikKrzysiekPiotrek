@@ -7,7 +7,7 @@
 	padding: 0;
 }
 .shadow {
-	background-color: $shadow
+	background-color: $shadow;
 }
 
 body {
@@ -61,7 +61,7 @@ header {
 		height: 100%;
 		top: 0;
 		z-index: -10;
-		background-color: $shadow
+		background-color: $shadow;
 	}
 	.hero-text {
 		position: absolute;
@@ -101,12 +101,17 @@ header {
 				padding: 5px;
 			}
 			form {
+				width: 330px;
+				margin: 0 auto;
 				button {
+					display: block;
+					margin: 0 auto;
 					border-radius: 15px;
 					font-size: 13px;
-					padding: 9px;width: 104px;
+					padding: 9px;
+					width: 104px;
 				}
-				button:hover{
+				button:hover {
 					box-shadow: inset 4px 4px 12px black;
 					font-weight: bold;
 				}
@@ -268,6 +273,20 @@ ul {
 }
 
 @media (min-width: 320px) {
+	.search-engine {
+		.container {
+			.input-group {
+				width: auto;
+				form{
+					button{
+						display: block;
+						margin: 0 auto;
+						margin-top: 10px;
+					}
+				}
+			}
+		}
+	}
 	.footer-section {
 		.container {
 			margin: 0 auto;
@@ -294,10 +313,10 @@ ul {
 	}
 }
 
-@media (min-width:414px){
-    .container{
-        .navbar-toggler{
+@media (min-width: 414px) {
+	.container {
+		.navbar-toggler {
 			margin-right: 20px;
 		}
-    }
+	}
 }

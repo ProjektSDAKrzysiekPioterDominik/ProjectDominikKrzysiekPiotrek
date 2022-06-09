@@ -110,7 +110,14 @@ header .hero-text p {
   padding: 5px;
 }
 
+.search-engine .container .input-group form {
+  width: 330px;
+  margin: 0 auto;
+}
+
 .search-engine .container .input-group form button {
+  display: block;
+  margin: 0 auto;
   border-radius: 15px;
   font-size: 13px;
   padding: 9px;
@@ -288,6 +295,14 @@ ul {
 }
 
 @media (min-width: 320px) {
+  .search-engine .container .input-group {
+    width: auto;
+  }
+  .search-engine .container .input-group form button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
   .footer-section .container {
     margin: 0 auto;
   }
