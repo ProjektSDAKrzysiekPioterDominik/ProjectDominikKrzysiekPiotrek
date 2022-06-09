@@ -3,6 +3,7 @@
 	margin: 0;
 	padding: 0;
 }
+
 body {
 	position: relative;
 	font-family: 'Montserrat', sans-serif;
@@ -10,80 +11,95 @@ body {
 }
 
 .container {
-	position: absolute;
 	display: block;
 	height: 500px;
 	width: 400px;
 	top: 150px;
 	left: 50%;
 	transform: translateX(-50%);
-	color: white;
+	color: #fff;
 	background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
 }
+
 .container .title {
 	text-align: center;
 	padding-top: 10px;
 	text-transform: uppercase;
 }
+
 hr {
 	width: 70%;
-	position: absolute;
 	left: 50%;
 	transform: translate(-50%);
 }
+
 .container input {
 	height: 40px;
 }
+
 .container .name input {
-	position: absolute;
 	left: 5%;
 	top: 50px;
 }
+
 .container .surname input {
-	position: absolute;
 	right: 5%;
 	top: 50px;
 }
+
 .container .phone input {
-	position: absolute;
 	left: 50%;
 	top: 100px;
 	width: 200px;
 	transform: translateX(-50%);
 }
+
 .container .email input {
-	position: absolute;
 	top: 180px;
 	left: 50%;
 	width: 200px;
 	transform: translateX(-50%);
 }
+
 .container .password input {
-	position: absolute;
 	top: 250px;
 	width: 200px;
 	left: 50%;
 	transform: translateX(-50%);
 }
-.container .comeback {
+.container .password input,
+.container .comeback,
+.container .button .register,
+.container .email input,
+.container .phone input,
+.container .surname input,
+.container,
+hr,
+.container .name input {
 	position: absolute;
+}
+
+.container .comeback {
 	bottom: 20px;
 	right: 20px;
 }
+
 .container .comeback a {
 	text-decoration: none;
 	color: #fff;
 	transition: color 0.5s;
 }
+
 .container .comeback a:hover {
-	color: deepskyblue;
+	color: #00bfff;
 }
+
 .container .button .register:hover {
-	box-shadow: inset 4px 4px 12px black;
+	box-shadow: inset 4px 4px 12px #000;
 }
+
 .container .button .register {
 	background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
-	position: absolute;
 	bottom: 30%;
 	left: 50%;
 	transform: translateX(-50%);
@@ -92,12 +108,13 @@ hr {
 	cursor: pointer;
 	transition: box-shadow 0.5s;
 }
+
 .container .button .register a {
 	text-decoration: none;
 	color: #333;
 	text-transform: uppercase;
 	font-size: 12px;
-	font-weight: bold;
+	font-weight: 700;
 }
 
 @media (min-width: 320px) {
@@ -116,36 +133,30 @@ hr {
 		transform: translateX(-50%);
 	}
 	.container .surname input {
-		position: absolute;
-		/* right: 5%; */
 		left: 50%;
 		transform: translateX(-50%);
 		top: 21%;
 		width: 75%;
 	}
 	.container .phone input {
-		position: absolute;
 		left: 50%;
 		top: 31%;
 		width: 75%;
 		transform: translateX(-50%);
 	}
 	.container .email input {
-		position: absolute;
 		top: 41%;
 		left: 50%;
 		width: 75%;
 		transform: translateX(-50%);
 	}
 	.container .password input {
-		position: absolute;
 		top: 51%;
 		width: 75%;
 		left: 50%;
 		transform: translateX(-50%);
 	}
 	.container .comeback {
-		position: absolute;
 		text-align: center;
 		bottom: 20px;
 		left: 50%;

@@ -3,6 +3,7 @@
 	margin: 0;
 	padding: 0;
 }
+
 body {
 	position: relative;
 	font-family: 'Montserrat', sans-serif;
@@ -17,43 +18,26 @@ body {
 	top: 150px;
 	left: 50%;
 	transform: translateX(-50%);
-	color: white;
+	color: #fff;
 	background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
 }
+
 .container .title {
 	text-align: center;
 	padding-top: 10px;
 	text-transform: uppercase;
 }
-.container .email {
-	margin: 50px;
-	height: 50px;
-}
-.container .email input {
-	width: 100%;
-	height: 100%;
-	border: 2px solid black;
-	border-radius: 15px;
-}
 
-.container .password {
-	margin: 50px;
-	height: 50px;
-}
-.container .password input {
-	width: 100%;
-	height: 100%;
-	border: 2px solid black;
-	border-radius: 15px;
-}
 .container form p {
 	margin-left: 50px;
 }
+
 .container .buttons {
 	display: flex;
 	justify-content: space-around;
 	margin-top: 30px;
 }
+
 .container .buttons .login {
 	background-image: linear-gradient(to top, #0250c5 0%, #d43f8d 100%);
 	width: 150px;
@@ -61,32 +45,13 @@ body {
 	cursor: pointer;
 	transition: box-shadow 0.5s;
 }
-.container .buttons .login a {
-	text-decoration: none;
-	color: #333;
-	text-transform: uppercase;
-	font-size: 12px;
-	font-weight: bold;
-}
-.container .buttons .login:hover {
-	box-shadow: inset 4px 4px 12px black;
-}
-.container .buttons .register:hover {
-	box-shadow: inset 4px 4px 12px black;
-}
+
 .container .buttons .register {
 	background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
 	width: 150px;
 	height: 50px;
 	cursor: pointer;
 	transition: box-shadow 0.5s;
-}
-.container .buttons .register a {
-	text-decoration: none;
-	color: #333;
-	text-transform: uppercase;
-	font-size: 12px;
-	font-weight: bold;
 }
 
 .container .comeback a {
@@ -99,10 +64,38 @@ body {
 	transform: translateX(-50%);
 	transition: 0.5s;
 }
+
 .container .comeback a:hover {
 	color: aqua;
 }
 
+.container .email,
+.container .password {
+	height: 50px;
+	margin: 50px;
+}
+
+.container .email input,
+.container .password input {
+	width: 100%;
+	height: 100%;
+	border: 2px solid #000;
+	border-radius: 15px;
+}
+
+.container .buttons .login a,
+.container .buttons .register a {
+	text-decoration: none;
+	color: #333;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 700;
+}
+
+.container .buttons .login:hover,
+.container .buttons .register:hover {
+	box-shadow: inset 4px 4px 12px #000;
+}
 @media (min-width: 320px) {
 	.container {
 		width: 100%;
@@ -237,7 +230,7 @@ body {
 	.container .buttons {
 		position: absolute;
 		bottom: 138px;
-        height: auto;
+		height: auto;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -249,11 +242,11 @@ body {
 		width: 184px;
 		height: 63px;
 	}
-    .container .comeback a{
-        font-size: 15px;
-    }
-    .container form {
-        top: 46%;
-        font-size: 17px;
-    }
+	.container .comeback a {
+		font-size: 15px;
+	}
+	.container form {
+		top: 46%;
+		font-size: 17px;
+	}
 }
